@@ -1,0 +1,14 @@
+--cpu Cortex-M3
+".\objects\principal.o"
+".\objects\timemanagement.o"
+".\objects\stringfct_2024.o"
+".\objects\lcd_balance.o"
+".\objects\toolbox_nrj_uc_interface.o"
+".\objects\clock_f103.o"
+".\Pilotes\Lib_IO_ITExt_ADC_TIM_2024a.lib"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--library_type=microlib --strict --scatter ".\Objects\Pjet_uC_CASR.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Pjet_uC_CASR.map" -o .\Objects\Pjet_uC_CASR.axf

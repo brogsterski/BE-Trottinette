@@ -41,7 +41,7 @@ récupérée par le callback  IT_Principale
 #define Fe 2000.0 					/* [Hz] */
 #define Te (1.0/Fe)					/* [sec] */
 #define Ft 200.0						/* [Hz] */
-#define TROTT 1  						/* 1 (Hall + ordre 1)
+#define TROTT 2  						/* 1 (Hall + ordre 1)
 															2 (Hall + ordre 2+1)
 															ou 3 (Shunt + ordre2+1) en fonction de la trott*/ 
 
@@ -76,6 +76,7 @@ récupérée par le callback  IT_Principale
 
 /*IT Functions*/
 void IT_Principale(void);
+void IT_signaux_carre (void);
 
 /* LCD functions complémentaires*/
 void LCD_ClearTopLine(void);
@@ -100,9 +101,10 @@ static float sortie_prev = 0;
 
 
 char MessageLCD[50];
+int f=0;
+
 
 int main(void)
-
 {
 	
 	float K_2 =K;
@@ -133,7 +135,7 @@ int main(void)
 	Triangle(20.0);   /*  PWM en ref triangulaire 20kHz*/
 	Active_Voie_PWM(1);
 	Active_Voie_PWM(2);
-	Inv_Voie(2);
+	//Inv_Voie(2);
 	R_Cyc_1(500);
 	R_Cyc_2(500);
 	
@@ -142,13 +144,18 @@ int main(void)
 
 	/*======================= CONF TIM2 en interruption à Te     ===*/	 
 	Conf_IT_Principale_TIM(TIM2,IT_Principale,Te*1000000.0); 
+	Conf_IT_Principale_TIM(TIM4,IT_signaux_carre,1000000.0); //appelle notre fonction carré toutes les 1sec pour voir la réponse dynamique du syst
 	
 	/* ====================================================
 	               Main loop		
 		=====================================================*/ 
 	while(1)
 	{	
-		
+		if (f ==1){
+			LCD_ClearTopLine();
+			lcd_Print(MessageLCD);
+			LCD_ClearDownLine();
+		}
 	}
 	
 	
@@ -158,21 +165,30 @@ int main(void)
 /*****************************************************************
 **								Fonction Interruptions 											  **
 ******************************************************************/
+void IT_signaux_carre(void) //générer un signaux carré pour voir l aréponse dynamique du système avec un échelon en entrée et compare ravec le simulink
+{
+	if (pot <= 1.57){pot=1.80;} //pot = 1.65 équivalent au 0 du potentiomètre et pot =1.77 équivalent à une consigne à 0.12A du potentiomètre
+	else 
+	{pot =1.50;
+	}
+}
 
 void IT_Principale(void)
 {
+	
 	//Récup des entrées
-	//pot = (float)(Read_Cons()*3.3/4095.0);
-	//courant = (float)(Read_I()*3.3/4095.0);
-	//p
-	pot = 0.2;
-	courant = 0;
+  //pot = (float)(Read_Cons()*3.3/4095.0);
+	courant = (float)(Read_I()*3.3/4095.0);
+
+
 	//ref = Read_Ref();
+	StringFct_Float2Str(courant,MessageLCD, 3, 2);
 	
 	erreur = (float)(pot - courant);
 	
 	sortie = sortie_prev + K*erreur +(-(K)+((Te)/(TAU_I)))*erreur_prev;
-	
+	f++;
+	if (f==100){f=0;}
 	//Saturateur
 	if(sortie > 0.45){
 		sortie = 0.45;
@@ -187,7 +203,6 @@ void IT_Principale(void)
 	//MàJ des PWM
 	R_Cyc_1((sortie + 0.5) * 1000);
 	R_Cyc_2(1000 - ((sortie+0.5)*1000));
-	
 }
 
 

@@ -20,12 +20,14 @@ Section Cross References
     principal.o(.text.main) refers to principal.o(.text.LCD_ClearDownLine) for LCD_ClearDownLine
     principal.o(.text.main) refers to toolbox_nrj_uc_interface.o(.text.Triangle) for Triangle
     principal.o(.text.main) refers to toolbox_nrj_uc_interface.o(.text.Active_Voie_PWM) for Active_Voie_PWM
-    principal.o(.text.main) refers to toolbox_nrj_uc_interface.o(.text.Inv_Voie) for Inv_Voie
     principal.o(.text.main) refers to toolbox_nrj_uc_interface.o(.text.R_Cyc_1) for R_Cyc_1
     principal.o(.text.main) refers to toolbox_nrj_uc_interface.o(.text.R_Cyc_2) for R_Cyc_2
     principal.o(.text.main) refers to toolbox_nrj_uc_interface.o(.text.Conf_ADC) for Conf_ADC
     principal.o(.text.main) refers to principal.o(.text.IT_Principale) for IT_Principale
     principal.o(.text.main) refers to toolbox_nrj_uc_interface.o(.text.Conf_IT_Principale_TIM) for Conf_IT_Principale_TIM
+    principal.o(.text.main) refers to principal.o(.text.IT_signaux_carre) for IT_signaux_carre
+    principal.o(.text.main) refers to principal.o(.bss.f) for f
+    principal.o(.text.main) refers to principal.o(.bss.MessageLCD) for MessageLCD
     principal.o(.ARM.exidx.text.main) refers to principal.o(.text.main) for [Anonymous Symbol]
     principal.o(.text.LCD_ClearTopLine) refers to lcd_balance.o(.text.lcd_Set_cursor) for lcd_Set_cursor
     principal.o(.text.LCD_ClearTopLine) refers to principal.o(.rodata.str1.1) for .L.str.1
@@ -35,23 +37,33 @@ Section Cross References
     principal.o(.text.LCD_ClearDownLine) refers to principal.o(.rodata.str1.1) for .L.str.1
     principal.o(.text.LCD_ClearDownLine) refers to lcd_balance.o(.text.lcd_Print) for lcd_Print
     principal.o(.ARM.exidx.text.LCD_ClearDownLine) refers to principal.o(.text.LCD_ClearDownLine) for [Anonymous Symbol]
-    principal.o(.text.IT_Principale) refers to principal.o(.bss.pot) for pot
+    principal.o(.text.IT_Principale) refers to toolbox_nrj_uc_interface.o(.text.Read_I) for Read_I
+    principal.o(.text.IT_Principale) refers to dflti.o(.text) for __aeabi_i2d
+    principal.o(.text.IT_Principale) refers to dmul.o(.text) for __aeabi_dmul
+    principal.o(.text.IT_Principale) refers to ddiv.o(.text) for __aeabi_ddiv
+    principal.o(.text.IT_Principale) refers to d2f.o(.text) for __aeabi_d2f
     principal.o(.text.IT_Principale) refers to principal.o(.bss.courant) for courant
+    principal.o(.text.IT_Principale) refers to principal.o(.bss.MessageLCD) for MessageLCD
+    principal.o(.text.IT_Principale) refers to stringfct_2024.o(.text.StringFct_Float2Str) for StringFct_Float2Str
+    principal.o(.text.IT_Principale) refers to principal.o(.bss.pot) for pot
     principal.o(.text.IT_Principale) refers to fadd.o(.text) for __aeabi_fsub
     principal.o(.text.IT_Principale) refers to principal.o(.bss.erreur) for erreur
     principal.o(.text.IT_Principale) refers to principal.o(.bss.sortie_prev) for sortie_prev
     principal.o(.text.IT_Principale) refers to f2d.o(.text) for __aeabi_f2d
-    principal.o(.text.IT_Principale) refers to dmul.o(.text) for __aeabi_dmul
     principal.o(.text.IT_Principale) refers to dadd.o(.text) for __aeabi_dadd
     principal.o(.text.IT_Principale) refers to principal.o(.bss.erreur_prev) for erreur_prev
-    principal.o(.text.IT_Principale) refers to d2f.o(.text) for __aeabi_d2f
     principal.o(.text.IT_Principale) refers to principal.o(.bss.sortie) for sortie
+    principal.o(.text.IT_Principale) refers to principal.o(.bss.f) for f
     principal.o(.text.IT_Principale) refers to dcmple.o(.text) for __aeabi_dcmple
     principal.o(.text.IT_Principale) refers to dcmpge.o(.text) for __aeabi_dcmpge
     principal.o(.text.IT_Principale) refers to dfixi.o(.text) for __aeabi_d2iz
     principal.o(.text.IT_Principale) refers to toolbox_nrj_uc_interface.o(.text.R_Cyc_1) for R_Cyc_1
     principal.o(.text.IT_Principale) refers to toolbox_nrj_uc_interface.o(.text.R_Cyc_2) for R_Cyc_2
     principal.o(.ARM.exidx.text.IT_Principale) refers to principal.o(.text.IT_Principale) for [Anonymous Symbol]
+    principal.o(.text.IT_signaux_carre) refers to principal.o(.bss.pot) for pot
+    principal.o(.text.IT_signaux_carre) refers to f2d.o(.text) for __aeabi_f2d
+    principal.o(.text.IT_signaux_carre) refers to dcmpgt.o(.text) for __aeabi_dcmpgt
+    principal.o(.ARM.exidx.text.IT_signaux_carre) refers to principal.o(.text.IT_signaux_carre) for [Anonymous Symbol]
     timemanagement.o(.text.Time_Init) refers to timemanagement.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
     timemanagement.o(.text.Time_Init) refers to timemanagement.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
     timemanagement.o(.text.Time_Init) refers to timemanagement.o(.bss.Cpt_1ms) for Cpt_1ms
@@ -94,6 +106,7 @@ Section Cross References
     lcd_balance.o(.text.lcd_write_cmd) refers to lcd_balance.o(.text.wait_while_busy) for wait_while_busy
     lcd_balance.o(.text.lcd_write_cmd) refers to lcd_balance.o(.text.lcd_write_4bit) for lcd_write_4bit
     lcd_balance.o(.ARM.exidx.text.lcd_write_cmd) refers to lcd_balance.o(.text.lcd_write_cmd) for [Anonymous Symbol]
+    lcd_balance.o(.text.wait_while_busy) refers to lcd_balance.o(.text.lcd_read_status) for lcd_read_status
     lcd_balance.o(.ARM.exidx.text.wait_while_busy) refers to lcd_balance.o(.text.wait_while_busy) for [Anonymous Symbol]
     lcd_balance.o(.text.lcd_putchar) refers to lcd_balance.o(.text.lcd_write_data) for lcd_write_data
     lcd_balance.o(.ARM.exidx.text.lcd_putchar) refers to lcd_balance.o(.text.lcd_putchar) for [Anonymous Symbol]
@@ -126,6 +139,9 @@ Section Cross References
     lcd_balance.o(.text.lcd_bargraphXY) refers to lcd_balance.o(.text.lcd_Set_cursor) for lcd_Set_cursor
     lcd_balance.o(.text.lcd_bargraphXY) refers to lcd_balance.o(.text.lcd_putchar) for lcd_putchar
     lcd_balance.o(.ARM.exidx.text.lcd_bargraphXY) refers to lcd_balance.o(.text.lcd_bargraphXY) for [Anonymous Symbol]
+    lcd_balance.o(.text.lcd_read_status) refers to lcd_balance.o(.text.delay) for delay
+    lcd_balance.o(.text.lcd_read_status) refers to lcd_balance.o(.rodata.SWAP_DATA) for SWAP_DATA
+    lcd_balance.o(.ARM.exidx.text.lcd_read_status) refers to lcd_balance.o(.text.lcd_read_status) for [Anonymous Symbol]
     toolbox_nrj_uc_interface.o(.text.Conf_Generale_IO_Carte) refers to gpio.o(.text.GPIO_Configure) for GPIO_Configure
     toolbox_nrj_uc_interface.o(.ARM.exidx.text.Conf_Generale_IO_Carte) refers to toolbox_nrj_uc_interface.o(.text.Conf_Generale_IO_Carte) for [Anonymous Symbol]
     toolbox_nrj_uc_interface.o(.text.Conf_IT_Principale_TIM) refers to timer_1234.o(.text.Timer_1234_Init) for Timer_1234_Init
@@ -400,6 +416,8 @@ Section Cross References
     fflti.o(.text) refers to fepilogue.o(.text) for _float_epilogue
     ffltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     ffltui.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
     dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
     ffixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
@@ -431,7 +449,7 @@ Removing Unused input sections from the image.
     Removing principal.o(.ARM.exidx.text.LCD_ClearTopLine), (8 bytes).
     Removing principal.o(.ARM.exidx.text.LCD_ClearDownLine), (8 bytes).
     Removing principal.o(.ARM.exidx.text.IT_Principale), (8 bytes).
-    Removing principal.o(.bss.MessageLCD), (50 bytes).
+    Removing principal.o(.ARM.exidx.text.IT_signaux_carre), (8 bytes).
     Removing principal.o(.ARM.use_no_argv), (4 bytes).
     Removing timemanagement.o(.text), (0 bytes).
     Removing timemanagement.o(.ARM.exidx.text.Time_Init), (8 bytes).
@@ -452,7 +470,6 @@ Removing Unused input sections from the image.
     Removing stringfct_2024.o(.ARM.exidx.text.StringFct_Int2Str_99), (8 bytes).
     Removing stringfct_2024.o(.text.StringFct_Int2Str), (198 bytes).
     Removing stringfct_2024.o(.ARM.exidx.text.StringFct_Int2Str), (8 bytes).
-    Removing stringfct_2024.o(.text.StringFct_Float2Str), (416 bytes).
     Removing stringfct_2024.o(.ARM.exidx.text.StringFct_Float2Str), (8 bytes).
     Removing stringfct_2024.o(.text.StringFct_Str2Float), (336 bytes).
     Removing stringfct_2024.o(.ARM.exidx.text.StringFct_Str2Float), (8 bytes).
@@ -475,6 +492,7 @@ Removing Unused input sections from the image.
     Removing lcd_balance.o(.ARM.exidx.text.lcd_bargraph), (8 bytes).
     Removing lcd_balance.o(.text.lcd_bargraphXY), (100 bytes).
     Removing lcd_balance.o(.ARM.exidx.text.lcd_bargraphXY), (8 bytes).
+    Removing lcd_balance.o(.ARM.exidx.text.lcd_read_status), (8 bytes).
     Removing lcd_balance.o(.rodata.str1.1), (35 bytes).
     Removing toolbox_nrj_uc_interface.o(.text), (0 bytes).
     Removing toolbox_nrj_uc_interface.o(.ARM.exidx.text.Conf_Generale_IO_Carte), (8 bytes).
@@ -482,9 +500,7 @@ Removing Unused input sections from the image.
     Removing toolbox_nrj_uc_interface.o(.ARM.exidx.text.Conf_ADC), (8 bytes).
     Removing toolbox_nrj_uc_interface.o(.text.Read_Cons), (10 bytes).
     Removing toolbox_nrj_uc_interface.o(.ARM.exidx.text.Read_Cons), (8 bytes).
-    Removing toolbox_nrj_uc_interface.o(.text.ToolBoxADC_Read), (60 bytes).
     Removing toolbox_nrj_uc_interface.o(.ARM.exidx.text.ToolBoxADC_Read), (8 bytes).
-    Removing toolbox_nrj_uc_interface.o(.text.Read_I), (10 bytes).
     Removing toolbox_nrj_uc_interface.o(.ARM.exidx.text.Read_I), (8 bytes).
     Removing toolbox_nrj_uc_interface.o(.text.Read_Ref), (10 bytes).
     Removing toolbox_nrj_uc_interface.o(.ARM.exidx.text.Read_Ref), (8 bytes).
@@ -495,6 +511,7 @@ Removing Unused input sections from the image.
     Removing toolbox_nrj_uc_interface.o(.text.UpRamp), (236 bytes).
     Removing toolbox_nrj_uc_interface.o(.ARM.exidx.text.UpRamp), (8 bytes).
     Removing toolbox_nrj_uc_interface.o(.ARM.exidx.text.Active_Voie_PWM), (8 bytes).
+    Removing toolbox_nrj_uc_interface.o(.text.Inv_Voie), (40 bytes).
     Removing toolbox_nrj_uc_interface.o(.ARM.exidx.text.Inv_Voie), (8 bytes).
     Removing toolbox_nrj_uc_interface.o(.data.Delta_UpRamp), (4 bytes).
     Removing toolbox_nrj_uc_interface.o(.bss.Resolution_1), (2 bytes).
@@ -535,7 +552,6 @@ Removing Unused input sections from the image.
     Removing adc_dma.o(.ARM.exidx.text.Init_ADC1_DMA1), (8 bytes).
     Removing adc_dma.o(.text.Start_DMA1), (44 bytes).
     Removing adc_dma.o(.ARM.exidx.text.Start_DMA1), (8 bytes).
-    Removing adc_dma.o(.text.Wait_On_EOC_ADC), (40 bytes).
     Removing adc_dma.o(.ARM.exidx.text.Wait_On_EOC_ADC), (8 bytes).
     Removing adc_dma.o(.text.Wait_On_End_Of_DMA1), (36 bytes).
     Removing adc_dma.o(.ARM.exidx.text.Wait_On_End_Of_DMA1), (8 bytes).
@@ -568,10 +584,9 @@ Removing Unused input sections from the image.
     Removing timer_1234.o(.ARM.exidx.text.TIM4_IRQHandler), (8 bytes).
     Removing timer_1234.o(.text.Lire_Duree_Pulse), (156 bytes).
     Removing timer_1234.o(.ARM.exidx.text.Lire_Duree_Pulse), (8 bytes).
-    Removing fcmpge.o(.text), (28 bytes).
     Removing fflti.o(.text), (18 bytes).
 
-144 unused section(s) (total 7921 bytes) removed from the image.
+141 unused section(s) (total 7373 bytes) removed from the image.
 
 ==============================================================================
 
@@ -614,6 +629,7 @@ Image Symbol Table
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  fflti.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  ffltui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  fmul.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
@@ -649,83 +665,91 @@ Image Symbol Table
     .text                                    0x080002ac   Section        0  dadd.o(.text)
     .text                                    0x080003fa   Section        0  dmul.o(.text)
     .text                                    0x080004de   Section        0  ddiv.o(.text)
-    .text                                    0x080005bc   Section        0  dcmple.o(.text)
-    .text                                    0x080005f2   Section        0  dcmpge.o(.text)
-    .text                                    0x08000628   Section        0  dcmpgt.o(.text)
-    .text                                    0x0800065e   Section        0  ffltui.o(.text)
-    .text                                    0x08000668   Section        0  dfltui.o(.text)
-    .text                                    0x08000682   Section        0  ffixi.o(.text)
-    .text                                    0x080006b4   Section        0  dfixi.o(.text)
-    .text                                    0x080006f2   Section        0  f2d.o(.text)
-    .text                                    0x08000718   Section        0  d2f.o(.text)
-    .text                                    0x08000750   Section        0  llshl.o(.text)
-    .text                                    0x0800076e   Section        0  llushr.o(.text)
-    .text                                    0x0800078e   Section        0  llsshr.o(.text)
-    .text                                    0x080007b2   Section        0  iusefp.o(.text)
-    .text                                    0x080007b2   Section        0  fepilogue.o(.text)
-    .text                                    0x08000820   Section        0  depilogue.o(.text)
-    .text                                    0x080008dc   Section       48  init.o(.text)
-    [Anonymous Symbol]                       0x0800090c   Section        0  timer_1234.o(.text.Active_IT_Debordement_Timer)
-    [Anonymous Symbol]                       0x08000aac   Section        0  toolbox_nrj_uc_interface.o(.text.Active_Voie_PWM)
-    [Anonymous Symbol]                       0x08000ae4   Section        0  clock_f103.o(.text.Clock_F103_ConfMainClk64MHz)
-    [Anonymous Symbol]                       0x08000afc   Section        0  clock_f103.o(.text.Clock_F103_ConfPrivate)
-    [Anonymous Symbol]                       0x08000dbc   Section        0  clock_f103.o(.text.Clock_F103_getADC_CLK)
-    [Anonymous Symbol]                       0x08000ed4   Section        0  clock_f103.o(.text.Clock_F103_getSYSCLK)
-    [Anonymous Symbol]                       0x08000fd0   Section        0  clock_f103.o(.text.Clock_F103_getTimerCLK)
-    [Anonymous Symbol]                       0x080010c4   Section        0  toolbox_nrj_uc_interface.o(.text.Conf_ADC)
-    [Anonymous Symbol]                       0x080010e4   Section        0  toolbox_nrj_uc_interface.o(.text.Conf_Generale_IO_Carte)
-    [Anonymous Symbol]                       0x08001154   Section        0  toolbox_nrj_uc_interface.o(.text.Conf_IT_Principale_TIM)
-    [Anonymous Symbol]                       0x08001180   Section        0  toolbox_nrj_uc_interface.o(.text.Desactive_Voie_PWM)
-    [Anonymous Symbol]                       0x080011b8   Section        0  gpio.o(.text.GPIO_Configure)
-    [Anonymous Symbol]                       0x080013cc   Section        0  principal.o(.text.IT_Principale)
-    [Anonymous Symbol]                       0x08001570   Section        0  adc_dma.o(.text.Init_TimingADC_ActiveADC)
-    [Anonymous Symbol]                       0x08001800   Section        0  toolbox_nrj_uc_interface.o(.text.Inv_Voie)
-    [Anonymous Symbol]                       0x08001828   Section        0  principal.o(.text.LCD_ClearDownLine)
-    [Anonymous Symbol]                       0x08001850   Section        0  principal.o(.text.LCD_ClearTopLine)
-    [Anonymous Symbol]                       0x08001878   Section        0  timer_1234.o(.text.PWM_Init)
-    [Anonymous Symbol]                       0x080019cc   Section        0  toolbox_nrj_uc_interface.o(.text.R_Cyc_1)
-    [Anonymous Symbol]                       0x08001a70   Section        0  toolbox_nrj_uc_interface.o(.text.R_Cyc_2)
-    SetSysClock                              0x08001b15   Thumb Code     8  system_stm32f10x.o(.text.SetSysClock)
-    [Anonymous Symbol]                       0x08001b14   Section        0  system_stm32f10x.o(.text.SetSysClock)
-    SetSysClockTo72                          0x08001b1d   Thumb Code   290  system_stm32f10x.o(.text.SetSysClockTo72)
-    [Anonymous Symbol]                       0x08001b1c   Section        0  system_stm32f10x.o(.text.SetSysClockTo72)
-    [Anonymous Symbol]                       0x08001c40   Section        0  adc_dma.o(.text.Single_Channel_ADC)
-    [Anonymous Symbol]                       0x08001c68   Section        0  timemanagement.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x08001c78   Section        0  system_stm32f10x.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x08001ce0   Section        0  timemanagement.o(.text.SystickGet)
-    [Anonymous Symbol]                       0x08001cec   Section        0  timer_1234.o(.text.TIM1_CC_IRQHandler)
-    [Anonymous Symbol]                       0x08001f68   Section        0  timer_1234.o(.text.TIM1_UP_IRQHandler)
-    [Anonymous Symbol]                       0x08001f88   Section        0  timer_1234.o(.text.TIM2_IRQHandler)
-    [Anonymous Symbol]                       0x0800220c   Section        0  timer_1234.o(.text.TIM3_IRQHandler)
-    [Anonymous Symbol]                       0x080024c8   Section        0  timer_1234.o(.text.TIM4_IRQHandler)
-    [Anonymous Symbol]                       0x08002784   Section        0  timemanagement.o(.text.Time_Delay_x_ms)
-    [Anonymous Symbol]                       0x080027b0   Section        0  timemanagement.o(.text.Time_Init)
-    [Anonymous Symbol]                       0x08002810   Section        0  timer_1234.o(.text.Timer_1234_Init)
-    [Anonymous Symbol]                       0x08002994   Section        0  toolbox_nrj_uc_interface.o(.text.Triangle)
-    __NVIC_EnableIRQ                         0x08002a89   Thumb Code    48  timemanagement.o(.text.__NVIC_EnableIRQ)
-    [Anonymous Symbol]                       0x08002a88   Section        0  timemanagement.o(.text.__NVIC_EnableIRQ)
-    __NVIC_SetPriority                       0x08002ab9   Thumb Code    66  timemanagement.o(.text.__NVIC_SetPriority)
-    [Anonymous Symbol]                       0x08002ab8   Section        0  timemanagement.o(.text.__NVIC_SetPriority)
-    delay                                    0x08002afd   Thumb Code     8  lcd_balance.o(.text.delay)
-    [Anonymous Symbol]                       0x08002afc   Section        0  lcd_balance.o(.text.delay)
-    [Anonymous Symbol]                       0x08002b04   Section        0  lcd_balance.o(.text.lcd_Clear)
-    [Anonymous Symbol]                       0x08002b18   Section        0  lcd_balance.o(.text.lcd_Init)
-    [Anonymous Symbol]                       0x08002be4   Section        0  lcd_balance.o(.text.lcd_Print)
-    [Anonymous Symbol]                       0x08002c2c   Section        0  lcd_balance.o(.text.lcd_Set_cursor)
-    [Anonymous Symbol]                       0x08002c60   Section        0  lcd_balance.o(.text.lcd_putchar)
-    [Anonymous Symbol]                       0x08002c74   Section        0  lcd_balance.o(.text.lcd_write_4bit)
-    [Anonymous Symbol]                       0x08002cdc   Section        0  lcd_balance.o(.text.lcd_write_cmd)
-    lcd_write_data                           0x08002d11   Thumb Code    50  lcd_balance.o(.text.lcd_write_data)
-    [Anonymous Symbol]                       0x08002d10   Section        0  lcd_balance.o(.text.lcd_write_data)
-    [Anonymous Symbol]                       0x08002d44   Section        0  principal.o(.text.main)
-    wait_while_busy                          0x08002e25   Thumb Code    10  lcd_balance.o(.text.wait_while_busy)
-    [Anonymous Symbol]                       0x08002e24   Section        0  lcd_balance.o(.text.wait_while_busy)
-    i.__scatterload_copy                     0x08002e2e   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08002e3c   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08002e3e   Section       14  handlers.o(i.__scatterload_zeroinit)
-    .L.str.1                                 0x08002ecc   Data          17  principal.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x08002ecc   Section        0  principal.o(.rodata.str1.1)
-    .L.str                                   0x08002edd   Data          13  principal.o(.rodata.str1.1)
+    .text                                    0x080005bc   Section        0  fcmpge.o(.text)
+    .text                                    0x080005d8   Section        0  dcmple.o(.text)
+    .text                                    0x0800060e   Section        0  dcmpge.o(.text)
+    .text                                    0x08000644   Section        0  dcmpgt.o(.text)
+    .text                                    0x0800067a   Section        0  ffltui.o(.text)
+    .text                                    0x08000684   Section        0  dflti.o(.text)
+    .text                                    0x080006a6   Section        0  dfltui.o(.text)
+    .text                                    0x080006c0   Section        0  ffixi.o(.text)
+    .text                                    0x080006f2   Section        0  dfixi.o(.text)
+    .text                                    0x08000730   Section        0  f2d.o(.text)
+    .text                                    0x08000756   Section        0  d2f.o(.text)
+    .text                                    0x0800078e   Section        0  llshl.o(.text)
+    .text                                    0x080007ac   Section        0  llushr.o(.text)
+    .text                                    0x080007cc   Section        0  llsshr.o(.text)
+    .text                                    0x080007f0   Section        0  iusefp.o(.text)
+    .text                                    0x080007f0   Section        0  fepilogue.o(.text)
+    .text                                    0x0800085e   Section        0  depilogue.o(.text)
+    .text                                    0x08000918   Section       48  init.o(.text)
+    [Anonymous Symbol]                       0x08000948   Section        0  timer_1234.o(.text.Active_IT_Debordement_Timer)
+    [Anonymous Symbol]                       0x08000ae8   Section        0  toolbox_nrj_uc_interface.o(.text.Active_Voie_PWM)
+    [Anonymous Symbol]                       0x08000b20   Section        0  clock_f103.o(.text.Clock_F103_ConfMainClk64MHz)
+    [Anonymous Symbol]                       0x08000b38   Section        0  clock_f103.o(.text.Clock_F103_ConfPrivate)
+    [Anonymous Symbol]                       0x08000df8   Section        0  clock_f103.o(.text.Clock_F103_getADC_CLK)
+    [Anonymous Symbol]                       0x08000f10   Section        0  clock_f103.o(.text.Clock_F103_getSYSCLK)
+    [Anonymous Symbol]                       0x0800100c   Section        0  clock_f103.o(.text.Clock_F103_getTimerCLK)
+    [Anonymous Symbol]                       0x08001100   Section        0  toolbox_nrj_uc_interface.o(.text.Conf_ADC)
+    [Anonymous Symbol]                       0x08001120   Section        0  toolbox_nrj_uc_interface.o(.text.Conf_Generale_IO_Carte)
+    [Anonymous Symbol]                       0x08001190   Section        0  toolbox_nrj_uc_interface.o(.text.Conf_IT_Principale_TIM)
+    [Anonymous Symbol]                       0x080011bc   Section        0  toolbox_nrj_uc_interface.o(.text.Desactive_Voie_PWM)
+    [Anonymous Symbol]                       0x080011f4   Section        0  gpio.o(.text.GPIO_Configure)
+    [Anonymous Symbol]                       0x08001408   Section        0  principal.o(.text.IT_Principale)
+    [Anonymous Symbol]                       0x0800160c   Section        0  principal.o(.text.IT_signaux_carre)
+    [Anonymous Symbol]                       0x0800165c   Section        0  adc_dma.o(.text.Init_TimingADC_ActiveADC)
+    [Anonymous Symbol]                       0x080018ec   Section        0  principal.o(.text.LCD_ClearDownLine)
+    [Anonymous Symbol]                       0x08001914   Section        0  principal.o(.text.LCD_ClearTopLine)
+    [Anonymous Symbol]                       0x0800193c   Section        0  timer_1234.o(.text.PWM_Init)
+    [Anonymous Symbol]                       0x08001a90   Section        0  toolbox_nrj_uc_interface.o(.text.R_Cyc_1)
+    [Anonymous Symbol]                       0x08001b34   Section        0  toolbox_nrj_uc_interface.o(.text.R_Cyc_2)
+    [Anonymous Symbol]                       0x08001bd8   Section        0  toolbox_nrj_uc_interface.o(.text.Read_I)
+    SetSysClock                              0x08001be5   Thumb Code     8  system_stm32f10x.o(.text.SetSysClock)
+    [Anonymous Symbol]                       0x08001be4   Section        0  system_stm32f10x.o(.text.SetSysClock)
+    SetSysClockTo72                          0x08001bed   Thumb Code   290  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x08001bec   Section        0  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x08001d10   Section        0  adc_dma.o(.text.Single_Channel_ADC)
+    [Anonymous Symbol]                       0x08001d38   Section        0  stringfct_2024.o(.text.StringFct_Float2Str)
+    [Anonymous Symbol]                       0x08001ed8   Section        0  timemanagement.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x08001ee8   Section        0  system_stm32f10x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08001f50   Section        0  timemanagement.o(.text.SystickGet)
+    [Anonymous Symbol]                       0x08001f5c   Section        0  timer_1234.o(.text.TIM1_CC_IRQHandler)
+    [Anonymous Symbol]                       0x080021d8   Section        0  timer_1234.o(.text.TIM1_UP_IRQHandler)
+    [Anonymous Symbol]                       0x080021f8   Section        0  timer_1234.o(.text.TIM2_IRQHandler)
+    [Anonymous Symbol]                       0x0800247c   Section        0  timer_1234.o(.text.TIM3_IRQHandler)
+    [Anonymous Symbol]                       0x08002738   Section        0  timer_1234.o(.text.TIM4_IRQHandler)
+    [Anonymous Symbol]                       0x080029f4   Section        0  timemanagement.o(.text.Time_Delay_x_ms)
+    [Anonymous Symbol]                       0x08002a20   Section        0  timemanagement.o(.text.Time_Init)
+    [Anonymous Symbol]                       0x08002a80   Section        0  timer_1234.o(.text.Timer_1234_Init)
+    [Anonymous Symbol]                       0x08002c04   Section        0  toolbox_nrj_uc_interface.o(.text.ToolBoxADC_Read)
+    [Anonymous Symbol]                       0x08002c40   Section        0  toolbox_nrj_uc_interface.o(.text.Triangle)
+    [Anonymous Symbol]                       0x08002d34   Section        0  adc_dma.o(.text.Wait_On_EOC_ADC)
+    __NVIC_EnableIRQ                         0x08002d5d   Thumb Code    48  timemanagement.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x08002d5c   Section        0  timemanagement.o(.text.__NVIC_EnableIRQ)
+    __NVIC_SetPriority                       0x08002d8d   Thumb Code    66  timemanagement.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08002d8c   Section        0  timemanagement.o(.text.__NVIC_SetPriority)
+    delay                                    0x08002dd1   Thumb Code    22  lcd_balance.o(.text.delay)
+    [Anonymous Symbol]                       0x08002dd0   Section        0  lcd_balance.o(.text.delay)
+    [Anonymous Symbol]                       0x08002de8   Section        0  lcd_balance.o(.text.lcd_Clear)
+    [Anonymous Symbol]                       0x08002dfc   Section        0  lcd_balance.o(.text.lcd_Init)
+    [Anonymous Symbol]                       0x08002ec8   Section        0  lcd_balance.o(.text.lcd_Print)
+    [Anonymous Symbol]                       0x08002f10   Section        0  lcd_balance.o(.text.lcd_Set_cursor)
+    [Anonymous Symbol]                       0x08002f44   Section        0  lcd_balance.o(.text.lcd_putchar)
+    lcd_read_status                          0x08002f59   Thumb Code   192  lcd_balance.o(.text.lcd_read_status)
+    [Anonymous Symbol]                       0x08002f58   Section        0  lcd_balance.o(.text.lcd_read_status)
+    [Anonymous Symbol]                       0x08003018   Section        0  lcd_balance.o(.text.lcd_write_4bit)
+    [Anonymous Symbol]                       0x08003080   Section        0  lcd_balance.o(.text.lcd_write_cmd)
+    lcd_write_data                           0x080030b5   Thumb Code    50  lcd_balance.o(.text.lcd_write_data)
+    [Anonymous Symbol]                       0x080030b4   Section        0  lcd_balance.o(.text.lcd_write_data)
+    [Anonymous Symbol]                       0x080030e8   Section        0  principal.o(.text.main)
+    wait_while_busy                          0x08003205   Thumb Code    36  lcd_balance.o(.text.wait_while_busy)
+    [Anonymous Symbol]                       0x08003204   Section        0  lcd_balance.o(.text.wait_while_busy)
+    i.__scatterload_copy                     0x08003228   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08003236   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08003238   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .L.str.1                                 0x080032c8   Data          17  principal.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x080032c8   Section        0  principal.o(.rodata.str1.1)
+    .L.str                                   0x080032d9   Data          13  principal.o(.rodata.str1.1)
     VirtualReso                              0x20000004   Data           4  toolbox_nrj_uc_interface.o(.data.VirtualReso)
     [Anonymous Symbol]                       0x20000004   Section        0  toolbox_nrj_uc_interface.o(.data.VirtualReso)
     Date_T1                                  0x2000000c   Data           8  timer_1234.o(.bss.Date_T1)
@@ -738,39 +762,39 @@ Image Symbol Table
     Duree_Pulse_T2                           0x20000038   Data           8  timer_1234.o(.bss.Duree_Pulse_T2)
     Duree_Pulse_T3                           0x20000040   Data           8  timer_1234.o(.bss.Duree_Pulse_T3)
     Duree_Pulse_T4                           0x20000048   Data           8  timer_1234.o(.bss.Duree_Pulse_T4)
-    Ptr_TIM1                                 0x20000060   Data           4  timer_1234.o(.bss.Ptr_TIM1)
-    Ptr_TIM1_Voie1                           0x20000064   Data           4  timer_1234.o(.bss.Ptr_TIM1_Voie1)
-    Ptr_TIM1_Voie2                           0x20000068   Data           4  timer_1234.o(.bss.Ptr_TIM1_Voie2)
-    Ptr_TIM1_Voie3                           0x2000006c   Data           4  timer_1234.o(.bss.Ptr_TIM1_Voie3)
-    Ptr_TIM1_Voie4                           0x20000070   Data           4  timer_1234.o(.bss.Ptr_TIM1_Voie4)
-    Ptr_TIM2                                 0x20000074   Data           4  timer_1234.o(.bss.Ptr_TIM2)
-    Ptr_TIM2_Voie1                           0x20000078   Data           4  timer_1234.o(.bss.Ptr_TIM2_Voie1)
-    Ptr_TIM2_Voie2                           0x2000007c   Data           4  timer_1234.o(.bss.Ptr_TIM2_Voie2)
-    Ptr_TIM2_Voie3                           0x20000080   Data           4  timer_1234.o(.bss.Ptr_TIM2_Voie3)
-    Ptr_TIM2_Voie4                           0x20000084   Data           4  timer_1234.o(.bss.Ptr_TIM2_Voie4)
-    Ptr_TIM3                                 0x20000088   Data           4  timer_1234.o(.bss.Ptr_TIM3)
-    Ptr_TIM3_Voie1                           0x2000008c   Data           4  timer_1234.o(.bss.Ptr_TIM3_Voie1)
-    Ptr_TIM3_Voie2                           0x20000090   Data           4  timer_1234.o(.bss.Ptr_TIM3_Voie2)
-    Ptr_TIM3_Voie3                           0x20000094   Data           4  timer_1234.o(.bss.Ptr_TIM3_Voie3)
-    Ptr_TIM3_Voie4                           0x20000098   Data           4  timer_1234.o(.bss.Ptr_TIM3_Voie4)
-    Ptr_TIM4                                 0x2000009c   Data           4  timer_1234.o(.bss.Ptr_TIM4)
-    Ptr_TIM4_Voie1                           0x200000a0   Data           4  timer_1234.o(.bss.Ptr_TIM4_Voie1)
-    Ptr_TIM4_Voie2                           0x200000a4   Data           4  timer_1234.o(.bss.Ptr_TIM4_Voie2)
-    Ptr_TIM4_Voie3                           0x200000a8   Data           4  timer_1234.o(.bss.Ptr_TIM4_Voie3)
-    Ptr_TIM4_Voie4                           0x200000ac   Data           4  timer_1234.o(.bss.Ptr_TIM4_Voie4)
-    courant                                  0x200000b4   Data           4  principal.o(.bss.courant)
-    [Anonymous Symbol]                       0x200000b4   Section        0  principal.o(.bss.courant)
-    erreur                                   0x200000b8   Data           4  principal.o(.bss.erreur)
-    [Anonymous Symbol]                       0x200000b8   Section        0  principal.o(.bss.erreur)
-    erreur_prev                              0x200000bc   Data           4  principal.o(.bss.erreur_prev)
-    [Anonymous Symbol]                       0x200000bc   Section        0  principal.o(.bss.erreur_prev)
-    pot                                      0x200000c0   Data           4  principal.o(.bss.pot)
-    [Anonymous Symbol]                       0x200000c0   Section        0  principal.o(.bss.pot)
-    sortie                                   0x200000c4   Data           4  principal.o(.bss.sortie)
-    [Anonymous Symbol]                       0x200000c4   Section        0  principal.o(.bss.sortie)
-    sortie_prev                              0x200000c8   Data           4  principal.o(.bss.sortie_prev)
-    [Anonymous Symbol]                       0x200000c8   Section        0  principal.o(.bss.sortie_prev)
-    STACK                                    0x200000d0   Section     1024  startup_stm32f10x_md.o(STACK)
+    Ptr_TIM1                                 0x20000094   Data           4  timer_1234.o(.bss.Ptr_TIM1)
+    Ptr_TIM1_Voie1                           0x20000098   Data           4  timer_1234.o(.bss.Ptr_TIM1_Voie1)
+    Ptr_TIM1_Voie2                           0x2000009c   Data           4  timer_1234.o(.bss.Ptr_TIM1_Voie2)
+    Ptr_TIM1_Voie3                           0x200000a0   Data           4  timer_1234.o(.bss.Ptr_TIM1_Voie3)
+    Ptr_TIM1_Voie4                           0x200000a4   Data           4  timer_1234.o(.bss.Ptr_TIM1_Voie4)
+    Ptr_TIM2                                 0x200000a8   Data           4  timer_1234.o(.bss.Ptr_TIM2)
+    Ptr_TIM2_Voie1                           0x200000ac   Data           4  timer_1234.o(.bss.Ptr_TIM2_Voie1)
+    Ptr_TIM2_Voie2                           0x200000b0   Data           4  timer_1234.o(.bss.Ptr_TIM2_Voie2)
+    Ptr_TIM2_Voie3                           0x200000b4   Data           4  timer_1234.o(.bss.Ptr_TIM2_Voie3)
+    Ptr_TIM2_Voie4                           0x200000b8   Data           4  timer_1234.o(.bss.Ptr_TIM2_Voie4)
+    Ptr_TIM3                                 0x200000bc   Data           4  timer_1234.o(.bss.Ptr_TIM3)
+    Ptr_TIM3_Voie1                           0x200000c0   Data           4  timer_1234.o(.bss.Ptr_TIM3_Voie1)
+    Ptr_TIM3_Voie2                           0x200000c4   Data           4  timer_1234.o(.bss.Ptr_TIM3_Voie2)
+    Ptr_TIM3_Voie3                           0x200000c8   Data           4  timer_1234.o(.bss.Ptr_TIM3_Voie3)
+    Ptr_TIM3_Voie4                           0x200000cc   Data           4  timer_1234.o(.bss.Ptr_TIM3_Voie4)
+    Ptr_TIM4                                 0x200000d0   Data           4  timer_1234.o(.bss.Ptr_TIM4)
+    Ptr_TIM4_Voie1                           0x200000d4   Data           4  timer_1234.o(.bss.Ptr_TIM4_Voie1)
+    Ptr_TIM4_Voie2                           0x200000d8   Data           4  timer_1234.o(.bss.Ptr_TIM4_Voie2)
+    Ptr_TIM4_Voie3                           0x200000dc   Data           4  timer_1234.o(.bss.Ptr_TIM4_Voie3)
+    Ptr_TIM4_Voie4                           0x200000e0   Data           4  timer_1234.o(.bss.Ptr_TIM4_Voie4)
+    courant                                  0x200000e8   Data           4  principal.o(.bss.courant)
+    [Anonymous Symbol]                       0x200000e8   Section        0  principal.o(.bss.courant)
+    erreur                                   0x200000ec   Data           4  principal.o(.bss.erreur)
+    [Anonymous Symbol]                       0x200000ec   Section        0  principal.o(.bss.erreur)
+    erreur_prev                              0x200000f0   Data           4  principal.o(.bss.erreur_prev)
+    [Anonymous Symbol]                       0x200000f0   Section        0  principal.o(.bss.erreur_prev)
+    pot                                      0x200000f8   Data           4  principal.o(.bss.pot)
+    [Anonymous Symbol]                       0x200000f8   Section        0  principal.o(.bss.pot)
+    sortie                                   0x200000fc   Data           4  principal.o(.bss.sortie)
+    [Anonymous Symbol]                       0x200000fc   Section        0  principal.o(.bss.sortie)
+    sortie_prev                              0x20000100   Data           4  principal.o(.bss.sortie_prev)
+    [Anonymous Symbol]                       0x20000100   Section        0  principal.o(.bss.sortie_prev)
+    STACK                                    0x20000108   Section     1024  startup_stm32f10x_md.o(STACK)
 
     Global Symbols
 
@@ -851,76 +875,82 @@ Image Symbol Table
     __aeabi_drsub                            0x080003f5   Thumb Code     6  dadd.o(.text)
     __aeabi_dmul                             0x080003fb   Thumb Code   228  dmul.o(.text)
     __aeabi_ddiv                             0x080004df   Thumb Code   222  ddiv.o(.text)
-    __aeabi_dcmple                           0x080005bd   Thumb Code    54  dcmple.o(.text)
-    __aeabi_dcmpge                           0x080005f3   Thumb Code    54  dcmpge.o(.text)
-    __aeabi_dcmpgt                           0x08000629   Thumb Code    54  dcmpgt.o(.text)
-    __aeabi_ui2f                             0x0800065f   Thumb Code    10  ffltui.o(.text)
-    __aeabi_ui2d                             0x08000669   Thumb Code    26  dfltui.o(.text)
-    __aeabi_f2iz                             0x08000683   Thumb Code    50  ffixi.o(.text)
-    __aeabi_d2iz                             0x080006b5   Thumb Code    62  dfixi.o(.text)
-    __aeabi_f2d                              0x080006f3   Thumb Code    38  f2d.o(.text)
-    __aeabi_d2f                              0x08000719   Thumb Code    56  d2f.o(.text)
-    __aeabi_llsl                             0x08000751   Thumb Code    30  llshl.o(.text)
-    _ll_shift_l                              0x08000751   Thumb Code     0  llshl.o(.text)
-    __aeabi_llsr                             0x0800076f   Thumb Code    32  llushr.o(.text)
-    _ll_ushift_r                             0x0800076f   Thumb Code     0  llushr.o(.text)
-    __aeabi_lasr                             0x0800078f   Thumb Code    36  llsshr.o(.text)
-    _ll_sshift_r                             0x0800078f   Thumb Code     0  llsshr.o(.text)
-    __I$use$fp                               0x080007b3   Thumb Code     0  iusefp.o(.text)
-    _float_round                             0x080007b3   Thumb Code    18  fepilogue.o(.text)
-    _float_epilogue                          0x080007c5   Thumb Code    92  fepilogue.o(.text)
-    _double_round                            0x08000821   Thumb Code    30  depilogue.o(.text)
-    _double_epilogue                         0x0800083f   Thumb Code   156  depilogue.o(.text)
-    __scatterload                            0x080008dd   Thumb Code    38  init.o(.text)
-    __scatterload_rt2                        0x080008dd   Thumb Code     0  init.o(.text)
-    Active_IT_Debordement_Timer              0x0800090d   Thumb Code   416  timer_1234.o(.text.Active_IT_Debordement_Timer)
-    Active_Voie_PWM                          0x08000aad   Thumb Code    56  toolbox_nrj_uc_interface.o(.text.Active_Voie_PWM)
-    Clock_F103_ConfMainClk64MHz              0x08000ae5   Thumb Code    24  clock_f103.o(.text.Clock_F103_ConfMainClk64MHz)
-    Clock_F103_ConfPrivate                   0x08000afd   Thumb Code   704  clock_f103.o(.text.Clock_F103_ConfPrivate)
-    Clock_F103_getADC_CLK                    0x08000dbd   Thumb Code   280  clock_f103.o(.text.Clock_F103_getADC_CLK)
-    Clock_F103_getSYSCLK                     0x08000ed5   Thumb Code   252  clock_f103.o(.text.Clock_F103_getSYSCLK)
-    Clock_F103_getTimerCLK                   0x08000fd1   Thumb Code   242  clock_f103.o(.text.Clock_F103_getTimerCLK)
-    Conf_ADC                                 0x080010c5   Thumb Code    32  toolbox_nrj_uc_interface.o(.text.Conf_ADC)
-    Conf_Generale_IO_Carte                   0x080010e5   Thumb Code   110  toolbox_nrj_uc_interface.o(.text.Conf_Generale_IO_Carte)
-    Conf_IT_Principale_TIM                   0x08001155   Thumb Code    44  toolbox_nrj_uc_interface.o(.text.Conf_IT_Principale_TIM)
-    Desactive_Voie_PWM                       0x08001181   Thumb Code    56  toolbox_nrj_uc_interface.o(.text.Desactive_Voie_PWM)
-    GPIO_Configure                           0x080011b9   Thumb Code   530  gpio.o(.text.GPIO_Configure)
-    IT_Principale                            0x080013cd   Thumb Code   418  principal.o(.text.IT_Principale)
-    Init_TimingADC_ActiveADC                 0x08001571   Thumb Code   656  adc_dma.o(.text.Init_TimingADC_ActiveADC)
-    Inv_Voie                                 0x08001801   Thumb Code    40  toolbox_nrj_uc_interface.o(.text.Inv_Voie)
-    LCD_ClearDownLine                        0x08001829   Thumb Code    40  principal.o(.text.LCD_ClearDownLine)
-    LCD_ClearTopLine                         0x08001851   Thumb Code    38  principal.o(.text.LCD_ClearTopLine)
-    PWM_Init                                 0x08001879   Thumb Code   340  timer_1234.o(.text.PWM_Init)
-    R_Cyc_1                                  0x080019cd   Thumb Code   164  toolbox_nrj_uc_interface.o(.text.R_Cyc_1)
-    R_Cyc_2                                  0x08001a71   Thumb Code   164  toolbox_nrj_uc_interface.o(.text.R_Cyc_2)
-    Single_Channel_ADC                       0x08001c41   Thumb Code    38  adc_dma.o(.text.Single_Channel_ADC)
-    SysTick_Handler                          0x08001c69   Thumb Code    16  timemanagement.o(.text.SysTick_Handler)
-    SystemInit                               0x08001c79   Thumb Code   102  system_stm32f10x.o(.text.SystemInit)
-    SystickGet                               0x08001ce1   Thumb Code    12  timemanagement.o(.text.SystickGet)
-    TIM1_CC_IRQHandler                       0x08001ced   Thumb Code   634  timer_1234.o(.text.TIM1_CC_IRQHandler)
-    TIM1_UP_IRQHandler                       0x08001f69   Thumb Code    32  timer_1234.o(.text.TIM1_UP_IRQHandler)
-    TIM2_IRQHandler                          0x08001f89   Thumb Code   644  timer_1234.o(.text.TIM2_IRQHandler)
-    TIM3_IRQHandler                          0x0800220d   Thumb Code   698  timer_1234.o(.text.TIM3_IRQHandler)
-    TIM4_IRQHandler                          0x080024c9   Thumb Code   698  timer_1234.o(.text.TIM4_IRQHandler)
-    Time_Delay_x_ms                          0x08002785   Thumb Code    44  timemanagement.o(.text.Time_Delay_x_ms)
-    Time_Init                                0x080027b1   Thumb Code    96  timemanagement.o(.text.Time_Init)
-    Timer_1234_Init                          0x08002811   Thumb Code   388  timer_1234.o(.text.Timer_1234_Init)
-    Triangle                                 0x08002995   Thumb Code   244  toolbox_nrj_uc_interface.o(.text.Triangle)
-    lcd_Clear                                0x08002b05   Thumb Code    18  lcd_balance.o(.text.lcd_Clear)
-    lcd_Init                                 0x08002b19   Thumb Code   202  lcd_balance.o(.text.lcd_Init)
-    lcd_Print                                0x08002be5   Thumb Code    70  lcd_balance.o(.text.lcd_Print)
-    lcd_Set_cursor                           0x08002c2d   Thumb Code    50  lcd_balance.o(.text.lcd_Set_cursor)
-    lcd_putchar                              0x08002c61   Thumb Code    20  lcd_balance.o(.text.lcd_putchar)
-    lcd_write_4bit                           0x08002c75   Thumb Code   102  lcd_balance.o(.text.lcd_write_4bit)
-    lcd_write_cmd                            0x08002cdd   Thumb Code    50  lcd_balance.o(.text.lcd_write_cmd)
-    main                                     0x08002d45   Thumb Code   224  principal.o(.text.main)
-    __scatterload_copy                       0x08002e2f   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08002e3d   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08002e3f   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    SWAP_DATA                                0x08002e4c   Data          64  lcd_balance.o(.rodata.SWAP_DATA)
-    UserFont                                 0x08002e8c   Data          64  lcd_balance.o(.rodata.UserFont)
-    Region$$Table$$Base                      0x08002eec   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08002f0c   Number         0  anon$$obj.o(Region$$Table)
+    __aeabi_fcmpge                           0x080005bd   Thumb Code    28  fcmpge.o(.text)
+    __aeabi_dcmple                           0x080005d9   Thumb Code    54  dcmple.o(.text)
+    __aeabi_dcmpge                           0x0800060f   Thumb Code    54  dcmpge.o(.text)
+    __aeabi_dcmpgt                           0x08000645   Thumb Code    54  dcmpgt.o(.text)
+    __aeabi_ui2f                             0x0800067b   Thumb Code    10  ffltui.o(.text)
+    __aeabi_i2d                              0x08000685   Thumb Code    34  dflti.o(.text)
+    __aeabi_ui2d                             0x080006a7   Thumb Code    26  dfltui.o(.text)
+    __aeabi_f2iz                             0x080006c1   Thumb Code    50  ffixi.o(.text)
+    __aeabi_d2iz                             0x080006f3   Thumb Code    62  dfixi.o(.text)
+    __aeabi_f2d                              0x08000731   Thumb Code    38  f2d.o(.text)
+    __aeabi_d2f                              0x08000757   Thumb Code    56  d2f.o(.text)
+    __aeabi_llsl                             0x0800078f   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x0800078f   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x080007ad   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x080007ad   Thumb Code     0  llushr.o(.text)
+    __aeabi_lasr                             0x080007cd   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x080007cd   Thumb Code     0  llsshr.o(.text)
+    __I$use$fp                               0x080007f1   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x080007f1   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x08000803   Thumb Code    92  fepilogue.o(.text)
+    _double_round                            0x0800085f   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x0800087d   Thumb Code   156  depilogue.o(.text)
+    __scatterload                            0x08000919   Thumb Code    38  init.o(.text)
+    __scatterload_rt2                        0x08000919   Thumb Code     0  init.o(.text)
+    Active_IT_Debordement_Timer              0x08000949   Thumb Code   416  timer_1234.o(.text.Active_IT_Debordement_Timer)
+    Active_Voie_PWM                          0x08000ae9   Thumb Code    56  toolbox_nrj_uc_interface.o(.text.Active_Voie_PWM)
+    Clock_F103_ConfMainClk64MHz              0x08000b21   Thumb Code    24  clock_f103.o(.text.Clock_F103_ConfMainClk64MHz)
+    Clock_F103_ConfPrivate                   0x08000b39   Thumb Code   704  clock_f103.o(.text.Clock_F103_ConfPrivate)
+    Clock_F103_getADC_CLK                    0x08000df9   Thumb Code   280  clock_f103.o(.text.Clock_F103_getADC_CLK)
+    Clock_F103_getSYSCLK                     0x08000f11   Thumb Code   252  clock_f103.o(.text.Clock_F103_getSYSCLK)
+    Clock_F103_getTimerCLK                   0x0800100d   Thumb Code   242  clock_f103.o(.text.Clock_F103_getTimerCLK)
+    Conf_ADC                                 0x08001101   Thumb Code    32  toolbox_nrj_uc_interface.o(.text.Conf_ADC)
+    Conf_Generale_IO_Carte                   0x08001121   Thumb Code   110  toolbox_nrj_uc_interface.o(.text.Conf_Generale_IO_Carte)
+    Conf_IT_Principale_TIM                   0x08001191   Thumb Code    44  toolbox_nrj_uc_interface.o(.text.Conf_IT_Principale_TIM)
+    Desactive_Voie_PWM                       0x080011bd   Thumb Code    56  toolbox_nrj_uc_interface.o(.text.Desactive_Voie_PWM)
+    GPIO_Configure                           0x080011f5   Thumb Code   530  gpio.o(.text.GPIO_Configure)
+    IT_Principale                            0x08001409   Thumb Code   514  principal.o(.text.IT_Principale)
+    IT_signaux_carre                         0x0800160d   Thumb Code    78  principal.o(.text.IT_signaux_carre)
+    Init_TimingADC_ActiveADC                 0x0800165d   Thumb Code   656  adc_dma.o(.text.Init_TimingADC_ActiveADC)
+    LCD_ClearDownLine                        0x080018ed   Thumb Code    40  principal.o(.text.LCD_ClearDownLine)
+    LCD_ClearTopLine                         0x08001915   Thumb Code    38  principal.o(.text.LCD_ClearTopLine)
+    PWM_Init                                 0x0800193d   Thumb Code   340  timer_1234.o(.text.PWM_Init)
+    R_Cyc_1                                  0x08001a91   Thumb Code   164  toolbox_nrj_uc_interface.o(.text.R_Cyc_1)
+    R_Cyc_2                                  0x08001b35   Thumb Code   164  toolbox_nrj_uc_interface.o(.text.R_Cyc_2)
+    Read_I                                   0x08001bd9   Thumb Code    10  toolbox_nrj_uc_interface.o(.text.Read_I)
+    Single_Channel_ADC                       0x08001d11   Thumb Code    38  adc_dma.o(.text.Single_Channel_ADC)
+    StringFct_Float2Str                      0x08001d39   Thumb Code   416  stringfct_2024.o(.text.StringFct_Float2Str)
+    SysTick_Handler                          0x08001ed9   Thumb Code    16  timemanagement.o(.text.SysTick_Handler)
+    SystemInit                               0x08001ee9   Thumb Code   102  system_stm32f10x.o(.text.SystemInit)
+    SystickGet                               0x08001f51   Thumb Code    12  timemanagement.o(.text.SystickGet)
+    TIM1_CC_IRQHandler                       0x08001f5d   Thumb Code   634  timer_1234.o(.text.TIM1_CC_IRQHandler)
+    TIM1_UP_IRQHandler                       0x080021d9   Thumb Code    32  timer_1234.o(.text.TIM1_UP_IRQHandler)
+    TIM2_IRQHandler                          0x080021f9   Thumb Code   644  timer_1234.o(.text.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x0800247d   Thumb Code   698  timer_1234.o(.text.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x08002739   Thumb Code   698  timer_1234.o(.text.TIM4_IRQHandler)
+    Time_Delay_x_ms                          0x080029f5   Thumb Code    44  timemanagement.o(.text.Time_Delay_x_ms)
+    Time_Init                                0x08002a21   Thumb Code    96  timemanagement.o(.text.Time_Init)
+    Timer_1234_Init                          0x08002a81   Thumb Code   388  timer_1234.o(.text.Timer_1234_Init)
+    ToolBoxADC_Read                          0x08002c05   Thumb Code    60  toolbox_nrj_uc_interface.o(.text.ToolBoxADC_Read)
+    Triangle                                 0x08002c41   Thumb Code   244  toolbox_nrj_uc_interface.o(.text.Triangle)
+    Wait_On_EOC_ADC                          0x08002d35   Thumb Code    40  adc_dma.o(.text.Wait_On_EOC_ADC)
+    lcd_Clear                                0x08002de9   Thumb Code    18  lcd_balance.o(.text.lcd_Clear)
+    lcd_Init                                 0x08002dfd   Thumb Code   202  lcd_balance.o(.text.lcd_Init)
+    lcd_Print                                0x08002ec9   Thumb Code    70  lcd_balance.o(.text.lcd_Print)
+    lcd_Set_cursor                           0x08002f11   Thumb Code    50  lcd_balance.o(.text.lcd_Set_cursor)
+    lcd_putchar                              0x08002f45   Thumb Code    20  lcd_balance.o(.text.lcd_putchar)
+    lcd_write_4bit                           0x08003019   Thumb Code   102  lcd_balance.o(.text.lcd_write_4bit)
+    lcd_write_cmd                            0x08003081   Thumb Code    50  lcd_balance.o(.text.lcd_write_cmd)
+    main                                     0x080030e9   Thumb Code   282  principal.o(.text.main)
+    __scatterload_copy                       0x08003229   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08003237   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08003239   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    SWAP_DATA                                0x08003248   Data          64  lcd_balance.o(.rodata.SWAP_DATA)
+    UserFont                                 0x08003288   Data          64  lcd_balance.o(.rodata.UserFont)
+    Region$$Table$$Base                      0x080032e8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08003308   Number         0  anon$$obj.o(Region$$Table)
     Delta_Triangle                           0x20000000   Data           4  toolbox_nrj_uc_interface.o(.data.Delta_Triangle)
     Cpt_1ms                                  0x20000008   Data           4  timemanagement.o(.bss.Cpt_1ms)
     Enable_Fct_IT_Compare_Match_TIM1_Voie1   0x20000050   Data           1  timer_1234.o(.bss.Enable_Fct_IT_Compare_Match_TIM1_Voie1)
@@ -939,8 +969,10 @@ Image Symbol Table
     Enable_Fct_IT_Compare_Match_TIM4_Voie2   0x2000005d   Data           1  timer_1234.o(.bss.Enable_Fct_IT_Compare_Match_TIM4_Voie2)
     Enable_Fct_IT_Compare_Match_TIM4_Voie3   0x2000005e   Data           1  timer_1234.o(.bss.Enable_Fct_IT_Compare_Match_TIM4_Voie3)
     Enable_Fct_IT_Compare_Match_TIM4_Voie4   0x2000005f   Data           1  timer_1234.o(.bss.Enable_Fct_IT_Compare_Match_TIM4_Voie4)
-    Resolution                               0x200000b0   Data           2  toolbox_nrj_uc_interface.o(.bss.Resolution)
-    __initial_sp                             0x200004d0   Data           0  startup_stm32f10x_md.o(STACK)
+    MessageLCD                               0x20000060   Data          50  principal.o(.bss.MessageLCD)
+    Resolution                               0x200000e4   Data           2  toolbox_nrj_uc_interface.o(.bss.Resolution)
+    f                                        0x200000f4   Data           4  principal.o(.bss.f)
+    __initial_sp                             0x20000508   Data           0  startup_stm32f10x_md.o(STACK)
 
 
 
@@ -950,185 +982,199 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002f18, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003310, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002f0c, Max: 0x00020000, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x08000000   0x08000000   0x000000ec   Data   RO          170    RESET               startup_stm32f10x_md.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO          302  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO          339    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO          342    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO          344    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO          346    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO          347    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO          349    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO          351    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO          340    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000100   0x08000100   0x0000001c   Code   RO          171    .text               startup_stm32f10x_md.o
-    0x0800011c   0x0800011c   0x000000b0   Code   RO          305    .text               mf_w.l(fadd.o)
-    0x080001cc   0x080001cc   0x00000064   Code   RO          307    .text               mf_w.l(fmul.o)
-    0x08000230   0x08000230   0x0000007c   Code   RO          309    .text               mf_w.l(fdiv.o)
-    0x080002ac   0x080002ac   0x0000014e   Code   RO          311    .text               mf_w.l(dadd.o)
-    0x080003fa   0x080003fa   0x000000e4   Code   RO          313    .text               mf_w.l(dmul.o)
-    0x080004de   0x080004de   0x000000de   Code   RO          315    .text               mf_w.l(ddiv.o)
-    0x080005bc   0x080005bc   0x00000036   Code   RO          319    .text               mf_w.l(dcmple.o)
-    0x080005f2   0x080005f2   0x00000036   Code   RO          321    .text               mf_w.l(dcmpge.o)
-    0x08000628   0x08000628   0x00000036   Code   RO          323    .text               mf_w.l(dcmpgt.o)
-    0x0800065e   0x0800065e   0x0000000a   Code   RO          327    .text               mf_w.l(ffltui.o)
-    0x08000668   0x08000668   0x0000001a   Code   RO          329    .text               mf_w.l(dfltui.o)
-    0x08000682   0x08000682   0x00000032   Code   RO          331    .text               mf_w.l(ffixi.o)
-    0x080006b4   0x080006b4   0x0000003e   Code   RO          333    .text               mf_w.l(dfixi.o)
-    0x080006f2   0x080006f2   0x00000026   Code   RO          335    .text               mf_w.l(f2d.o)
-    0x08000718   0x08000718   0x00000038   Code   RO          337    .text               mf_w.l(d2f.o)
-    0x08000750   0x08000750   0x0000001e   Code   RO          353    .text               mc_w.l(llshl.o)
-    0x0800076e   0x0800076e   0x00000020   Code   RO          355    .text               mc_w.l(llushr.o)
-    0x0800078e   0x0800078e   0x00000024   Code   RO          357    .text               mc_w.l(llsshr.o)
-    0x080007b2   0x080007b2   0x00000000   Code   RO          359    .text               mc_w.l(iusefp.o)
-    0x080007b2   0x080007b2   0x0000006e   Code   RO          360    .text               mf_w.l(fepilogue.o)
-    0x08000820   0x08000820   0x000000ba   Code   RO          362    .text               mf_w.l(depilogue.o)
-    0x080008da   0x080008da   0x00000002   PAD
-    0x080008dc   0x080008dc   0x00000030   Code   RO          364    .text               mc_w.l(init.o)
-    0x0800090c   0x0800090c   0x000001a0   Code   RO          233    .text.Active_IT_Debordement_Timer  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x08000aac   0x08000aac   0x00000038   Code   RO          130    .text.Active_Voie_PWM  toolbox_nrj_uc_interface.o
-    0x08000ae4   0x08000ae4   0x00000018   Code   RO          148    .text.Clock_F103_ConfMainClk64MHz  clock_f103.o
-    0x08000afc   0x08000afc   0x000002c0   Code   RO          150    .text.Clock_F103_ConfPrivate  clock_f103.o
-    0x08000dbc   0x08000dbc   0x00000118   Code   RO          158    .text.Clock_F103_getADC_CLK  clock_f103.o
-    0x08000ed4   0x08000ed4   0x000000fc   Code   RO          154    .text.Clock_F103_getSYSCLK  clock_f103.o
-    0x08000fd0   0x08000fd0   0x000000f2   Code   RO          156    .text.Clock_F103_getTimerCLK  clock_f103.o
-    0x080010c2   0x080010c2   0x00000002   PAD
-    0x080010c4   0x080010c4   0x00000020   Code   RO          110    .text.Conf_ADC      toolbox_nrj_uc_interface.o
-    0x080010e4   0x080010e4   0x0000006e   Code   RO          106    .text.Conf_Generale_IO_Carte  toolbox_nrj_uc_interface.o
-    0x08001152   0x08001152   0x00000002   PAD
-    0x08001154   0x08001154   0x0000002c   Code   RO          108    .text.Conf_IT_Principale_TIM  toolbox_nrj_uc_interface.o
-    0x08001180   0x08001180   0x00000038   Code   RO          122    .text.Desactive_Voie_PWM  toolbox_nrj_uc_interface.o
-    0x080011b8   0x080011b8   0x00000212   Code   RO          227    .text.GPIO_Configure  Lib_IO_ITExt_ADC_TIM_2024a.lib(gpio.o)
-    0x080013ca   0x080013ca   0x00000002   PAD
-    0x080013cc   0x080013cc   0x000001a2   Code   RO            8    .text.IT_Principale  principal.o
-    0x0800156e   0x0800156e   0x00000002   PAD
-    0x08001570   0x08001570   0x00000290   Code   RO          195    .text.Init_TimingADC_ActiveADC  Lib_IO_ITExt_ADC_TIM_2024a.lib(adc_dma.o)
-    0x08001800   0x08001800   0x00000028   Code   RO          132    .text.Inv_Voie      toolbox_nrj_uc_interface.o
-    0x08001828   0x08001828   0x00000028   Code   RO            6    .text.LCD_ClearDownLine  principal.o
-    0x08001850   0x08001850   0x00000026   Code   RO            4    .text.LCD_ClearTopLine  principal.o
-    0x08001876   0x08001876   0x00000002   PAD
-    0x08001878   0x08001878   0x00000154   Code   RO          237    .text.PWM_Init      Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x080019cc   0x080019cc   0x000000a4   Code   RO          124    .text.R_Cyc_1       toolbox_nrj_uc_interface.o
-    0x08001a70   0x08001a70   0x000000a4   Code   RO          126    .text.R_Cyc_2       toolbox_nrj_uc_interface.o
-    0x08001b14   0x08001b14   0x00000008   Code   RO          180    .text.SetSysClock   system_stm32f10x.o
-    0x08001b1c   0x08001b1c   0x00000122   Code   RO          184    .text.SetSysClockTo72  system_stm32f10x.o
-    0x08001c3e   0x08001c3e   0x00000002   PAD
-    0x08001c40   0x08001c40   0x00000026   Code   RO          197    .text.Single_Channel_ADC  Lib_IO_ITExt_ADC_TIM_2024a.lib(adc_dma.o)
-    0x08001c66   0x08001c66   0x00000002   PAD
-    0x08001c68   0x08001c68   0x00000010   Code   RO           34    .text.SysTick_Handler  timemanagement.o
-    0x08001c78   0x08001c78   0x00000066   Code   RO          178    .text.SystemInit    system_stm32f10x.o
-    0x08001cde   0x08001cde   0x00000002   PAD
-    0x08001ce0   0x08001ce0   0x0000000c   Code   RO           32    .text.SystickGet    timemanagement.o
-    0x08001cec   0x08001cec   0x0000027a   Code   RO          245    .text.TIM1_CC_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x08001f66   0x08001f66   0x00000002   PAD
-    0x08001f68   0x08001f68   0x00000020   Code   RO          247    .text.TIM1_UP_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x08001f88   0x08001f88   0x00000284   Code   RO          249    .text.TIM2_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x0800220c   0x0800220c   0x000002ba   Code   RO          251    .text.TIM3_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x080024c6   0x080024c6   0x00000002   PAD
-    0x080024c8   0x080024c8   0x000002ba   Code   RO          253    .text.TIM4_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x08002782   0x08002782   0x00000002   PAD
-    0x08002784   0x08002784   0x0000002c   Code   RO           40    .text.Time_Delay_x_ms  timemanagement.o
-    0x080027b0   0x080027b0   0x00000060   Code   RO           26    .text.Time_Init     timemanagement.o
-    0x08002810   0x08002810   0x00000184   Code   RO          231    .text.Timer_1234_Init  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x08002994   0x08002994   0x000000f4   Code   RO          120    .text.Triangle      toolbox_nrj_uc_interface.o
-    0x08002a88   0x08002a88   0x00000030   Code   RO           30    .text.__NVIC_EnableIRQ  timemanagement.o
-    0x08002ab8   0x08002ab8   0x00000042   Code   RO           28    .text.__NVIC_SetPriority  timemanagement.o
-    0x08002afa   0x08002afa   0x00000002   PAD
-    0x08002afc   0x08002afc   0x00000008   Code   RO           70    .text.delay         lcd_balance.o
-    0x08002b04   0x08002b04   0x00000012   Code   RO           86    .text.lcd_Clear     lcd_balance.o
-    0x08002b16   0x08002b16   0x00000002   PAD
-    0x08002b18   0x08002b18   0x000000ca   Code   RO           80    .text.lcd_Init      lcd_balance.o
-    0x08002be2   0x08002be2   0x00000002   PAD
-    0x08002be4   0x08002be4   0x00000046   Code   RO           84    .text.lcd_Print     lcd_balance.o
-    0x08002c2a   0x08002c2a   0x00000002   PAD
-    0x08002c2c   0x08002c2c   0x00000032   Code   RO           82    .text.lcd_Set_cursor  lcd_balance.o
-    0x08002c5e   0x08002c5e   0x00000002   PAD
-    0x08002c60   0x08002c60   0x00000014   Code   RO           76    .text.lcd_putchar   lcd_balance.o
-    0x08002c74   0x08002c74   0x00000066   Code   RO           68    .text.lcd_write_4bit  lcd_balance.o
-    0x08002cda   0x08002cda   0x00000002   PAD
-    0x08002cdc   0x08002cdc   0x00000032   Code   RO           72    .text.lcd_write_cmd  lcd_balance.o
-    0x08002d0e   0x08002d0e   0x00000002   PAD
-    0x08002d10   0x08002d10   0x00000032   Code   RO           78    .text.lcd_write_data  lcd_balance.o
-    0x08002d42   0x08002d42   0x00000002   PAD
-    0x08002d44   0x08002d44   0x000000e0   Code   RO            2    .text.main          principal.o
-    0x08002e24   0x08002e24   0x0000000a   Code   RO           74    .text.wait_while_busy  lcd_balance.o
-    0x08002e2e   0x08002e2e   0x0000000e   Code   RO          368    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08002e3c   0x08002e3c   0x00000002   Code   RO          369    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08002e3e   0x08002e3e   0x0000000e   Code   RO          370    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08002e4c   0x08002e4c   0x00000040   Data   RO           96    .rodata.SWAP_DATA   lcd_balance.o
-    0x08002e8c   0x08002e8c   0x00000040   Data   RO           97    .rodata.UserFont    lcd_balance.o
-    0x08002ecc   0x08002ecc   0x0000001e   Data   RO           10    .rodata.str1.1      principal.o
-    0x08002eea   0x08002eea   0x00000002   PAD
-    0x08002eec   0x08002eec   0x00000020   Data   RO          367    Region$$Table       anon$$obj.o
-
-
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002f10, Size: 0x000004d0, Max: 0x00005000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003308, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08002f10   0x00000004   Data   RW          135    .data.Delta_Triangle  toolbox_nrj_uc_interface.o
-    0x20000004   0x08002f14   0x00000004   Data   RW          138    .data.VirtualReso   toolbox_nrj_uc_interface.o
-    0x20000008        -       0x00000004   Zero   RW           42    .bss.Cpt_1ms        timemanagement.o
-    0x2000000c        -       0x00000008   Zero   RW          293    .bss.Date_T1        Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000014        -       0x00000008   Zero   RW          295    .bss.Date_T2        Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000001c        -       0x00000008   Zero   RW          297    .bss.Date_T3        Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000024        -       0x00000008   Zero   RW          299    .bss.Date_T4        Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000002c        -       0x00000004   Zero   RW          137    .bss.Delta_PWM      toolbox_nrj_uc_interface.o
-    0x20000030        -       0x00000008   Zero   RW          294    .bss.Duree_Pulse_T1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000038        -       0x00000008   Zero   RW          296    .bss.Duree_Pulse_T2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000040        -       0x00000008   Zero   RW          298    .bss.Duree_Pulse_T3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000048        -       0x00000008   Zero   RW          300    .bss.Duree_Pulse_T4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000050        -       0x00000001   Zero   RW          262    .bss.Enable_Fct_IT_Compare_Match_TIM1_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000051        -       0x00000001   Zero   RW          264    .bss.Enable_Fct_IT_Compare_Match_TIM1_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000052        -       0x00000001   Zero   RW          266    .bss.Enable_Fct_IT_Compare_Match_TIM1_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000053        -       0x00000001   Zero   RW          268    .bss.Enable_Fct_IT_Compare_Match_TIM1_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000054        -       0x00000001   Zero   RW          270    .bss.Enable_Fct_IT_Compare_Match_TIM2_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000055        -       0x00000001   Zero   RW          272    .bss.Enable_Fct_IT_Compare_Match_TIM2_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000056        -       0x00000001   Zero   RW          274    .bss.Enable_Fct_IT_Compare_Match_TIM2_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000057        -       0x00000001   Zero   RW          276    .bss.Enable_Fct_IT_Compare_Match_TIM2_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000058        -       0x00000001   Zero   RW          278    .bss.Enable_Fct_IT_Compare_Match_TIM3_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000059        -       0x00000001   Zero   RW          280    .bss.Enable_Fct_IT_Compare_Match_TIM3_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000005a        -       0x00000001   Zero   RW          282    .bss.Enable_Fct_IT_Compare_Match_TIM3_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000005b        -       0x00000001   Zero   RW          284    .bss.Enable_Fct_IT_Compare_Match_TIM3_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000005c        -       0x00000001   Zero   RW          286    .bss.Enable_Fct_IT_Compare_Match_TIM4_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000005d        -       0x00000001   Zero   RW          288    .bss.Enable_Fct_IT_Compare_Match_TIM4_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000005e        -       0x00000001   Zero   RW          290    .bss.Enable_Fct_IT_Compare_Match_TIM4_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000005f        -       0x00000001   Zero   RW          292    .bss.Enable_Fct_IT_Compare_Match_TIM4_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000060        -       0x00000004   Zero   RW          257    .bss.Ptr_TIM1       Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000064        -       0x00000004   Zero   RW          261    .bss.Ptr_TIM1_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000068        -       0x00000004   Zero   RW          263    .bss.Ptr_TIM1_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000006c        -       0x00000004   Zero   RW          265    .bss.Ptr_TIM1_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000070        -       0x00000004   Zero   RW          267    .bss.Ptr_TIM1_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000074        -       0x00000004   Zero   RW          258    .bss.Ptr_TIM2       Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000078        -       0x00000004   Zero   RW          269    .bss.Ptr_TIM2_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000007c        -       0x00000004   Zero   RW          271    .bss.Ptr_TIM2_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000080        -       0x00000004   Zero   RW          273    .bss.Ptr_TIM2_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000084        -       0x00000004   Zero   RW          275    .bss.Ptr_TIM2_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000088        -       0x00000004   Zero   RW          259    .bss.Ptr_TIM3       Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000008c        -       0x00000004   Zero   RW          277    .bss.Ptr_TIM3_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000090        -       0x00000004   Zero   RW          279    .bss.Ptr_TIM3_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000094        -       0x00000004   Zero   RW          281    .bss.Ptr_TIM3_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x20000098        -       0x00000004   Zero   RW          283    .bss.Ptr_TIM3_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x2000009c        -       0x00000004   Zero   RW          260    .bss.Ptr_TIM4       Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x200000a0        -       0x00000004   Zero   RW          285    .bss.Ptr_TIM4_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x200000a4        -       0x00000004   Zero   RW          287    .bss.Ptr_TIM4_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x200000a8        -       0x00000004   Zero   RW          289    .bss.Ptr_TIM4_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x200000ac        -       0x00000004   Zero   RW          291    .bss.Ptr_TIM4_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
-    0x200000b0        -       0x00000002   Zero   RW          136    .bss.Resolution     toolbox_nrj_uc_interface.o
-    0x200000b2   0x08002f18   0x00000002   PAD
-    0x200000b4        -       0x00000004   Zero   RW           12    .bss.courant        principal.o
-    0x200000b8        -       0x00000004   Zero   RW           13    .bss.erreur         principal.o
-    0x200000bc        -       0x00000004   Zero   RW           15    .bss.erreur_prev    principal.o
-    0x200000c0        -       0x00000004   Zero   RW           11    .bss.pot            principal.o
-    0x200000c4        -       0x00000004   Zero   RW           16    .bss.sortie         principal.o
-    0x200000c8        -       0x00000004   Zero   RW           14    .bss.sortie_prev    principal.o
-    0x200000cc   0x08002f18   0x00000004   PAD
-    0x200000d0        -       0x00000400   Zero   RW          168    STACK               startup_stm32f10x_md.o
+    0x08000000   0x08000000   0x000000ec   Data   RO          175    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000000   Code   RO          307  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO          346    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO          349    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          351    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          353    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO          354    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          356    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          358    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO          347    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000100   0x08000100   0x0000001c   Code   RO          176    .text               startup_stm32f10x_md.o
+    0x0800011c   0x0800011c   0x000000b0   Code   RO          310    .text               mf_w.l(fadd.o)
+    0x080001cc   0x080001cc   0x00000064   Code   RO          312    .text               mf_w.l(fmul.o)
+    0x08000230   0x08000230   0x0000007c   Code   RO          314    .text               mf_w.l(fdiv.o)
+    0x080002ac   0x080002ac   0x0000014e   Code   RO          316    .text               mf_w.l(dadd.o)
+    0x080003fa   0x080003fa   0x000000e4   Code   RO          318    .text               mf_w.l(dmul.o)
+    0x080004de   0x080004de   0x000000de   Code   RO          320    .text               mf_w.l(ddiv.o)
+    0x080005bc   0x080005bc   0x0000001c   Code   RO          322    .text               mf_w.l(fcmpge.o)
+    0x080005d8   0x080005d8   0x00000036   Code   RO          324    .text               mf_w.l(dcmple.o)
+    0x0800060e   0x0800060e   0x00000036   Code   RO          326    .text               mf_w.l(dcmpge.o)
+    0x08000644   0x08000644   0x00000036   Code   RO          328    .text               mf_w.l(dcmpgt.o)
+    0x0800067a   0x0800067a   0x0000000a   Code   RO          332    .text               mf_w.l(ffltui.o)
+    0x08000684   0x08000684   0x00000022   Code   RO          334    .text               mf_w.l(dflti.o)
+    0x080006a6   0x080006a6   0x0000001a   Code   RO          336    .text               mf_w.l(dfltui.o)
+    0x080006c0   0x080006c0   0x00000032   Code   RO          338    .text               mf_w.l(ffixi.o)
+    0x080006f2   0x080006f2   0x0000003e   Code   RO          340    .text               mf_w.l(dfixi.o)
+    0x08000730   0x08000730   0x00000026   Code   RO          342    .text               mf_w.l(f2d.o)
+    0x08000756   0x08000756   0x00000038   Code   RO          344    .text               mf_w.l(d2f.o)
+    0x0800078e   0x0800078e   0x0000001e   Code   RO          360    .text               mc_w.l(llshl.o)
+    0x080007ac   0x080007ac   0x00000020   Code   RO          362    .text               mc_w.l(llushr.o)
+    0x080007cc   0x080007cc   0x00000024   Code   RO          364    .text               mc_w.l(llsshr.o)
+    0x080007f0   0x080007f0   0x00000000   Code   RO          366    .text               mc_w.l(iusefp.o)
+    0x080007f0   0x080007f0   0x0000006e   Code   RO          367    .text               mf_w.l(fepilogue.o)
+    0x0800085e   0x0800085e   0x000000ba   Code   RO          369    .text               mf_w.l(depilogue.o)
+    0x08000918   0x08000918   0x00000030   Code   RO          371    .text               mc_w.l(init.o)
+    0x08000948   0x08000948   0x000001a0   Code   RO          238    .text.Active_IT_Debordement_Timer  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x08000ae8   0x08000ae8   0x00000038   Code   RO          135    .text.Active_Voie_PWM  toolbox_nrj_uc_interface.o
+    0x08000b20   0x08000b20   0x00000018   Code   RO          153    .text.Clock_F103_ConfMainClk64MHz  clock_f103.o
+    0x08000b38   0x08000b38   0x000002c0   Code   RO          155    .text.Clock_F103_ConfPrivate  clock_f103.o
+    0x08000df8   0x08000df8   0x00000118   Code   RO          163    .text.Clock_F103_getADC_CLK  clock_f103.o
+    0x08000f10   0x08000f10   0x000000fc   Code   RO          159    .text.Clock_F103_getSYSCLK  clock_f103.o
+    0x0800100c   0x0800100c   0x000000f2   Code   RO          161    .text.Clock_F103_getTimerCLK  clock_f103.o
+    0x080010fe   0x080010fe   0x00000002   PAD
+    0x08001100   0x08001100   0x00000020   Code   RO          115    .text.Conf_ADC      toolbox_nrj_uc_interface.o
+    0x08001120   0x08001120   0x0000006e   Code   RO          111    .text.Conf_Generale_IO_Carte  toolbox_nrj_uc_interface.o
+    0x0800118e   0x0800118e   0x00000002   PAD
+    0x08001190   0x08001190   0x0000002c   Code   RO          113    .text.Conf_IT_Principale_TIM  toolbox_nrj_uc_interface.o
+    0x080011bc   0x080011bc   0x00000038   Code   RO          127    .text.Desactive_Voie_PWM  toolbox_nrj_uc_interface.o
+    0x080011f4   0x080011f4   0x00000212   Code   RO          232    .text.GPIO_Configure  Lib_IO_ITExt_ADC_TIM_2024a.lib(gpio.o)
+    0x08001406   0x08001406   0x00000002   PAD
+    0x08001408   0x08001408   0x00000202   Code   RO            8    .text.IT_Principale  principal.o
+    0x0800160a   0x0800160a   0x00000002   PAD
+    0x0800160c   0x0800160c   0x0000004e   Code   RO           10    .text.IT_signaux_carre  principal.o
+    0x0800165a   0x0800165a   0x00000002   PAD
+    0x0800165c   0x0800165c   0x00000290   Code   RO          200    .text.Init_TimingADC_ActiveADC  Lib_IO_ITExt_ADC_TIM_2024a.lib(adc_dma.o)
+    0x080018ec   0x080018ec   0x00000028   Code   RO            6    .text.LCD_ClearDownLine  principal.o
+    0x08001914   0x08001914   0x00000026   Code   RO            4    .text.LCD_ClearTopLine  principal.o
+    0x0800193a   0x0800193a   0x00000002   PAD
+    0x0800193c   0x0800193c   0x00000154   Code   RO          242    .text.PWM_Init      Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x08001a90   0x08001a90   0x000000a4   Code   RO          129    .text.R_Cyc_1       toolbox_nrj_uc_interface.o
+    0x08001b34   0x08001b34   0x000000a4   Code   RO          131    .text.R_Cyc_2       toolbox_nrj_uc_interface.o
+    0x08001bd8   0x08001bd8   0x0000000a   Code   RO          121    .text.Read_I        toolbox_nrj_uc_interface.o
+    0x08001be2   0x08001be2   0x00000002   PAD
+    0x08001be4   0x08001be4   0x00000008   Code   RO          185    .text.SetSysClock   system_stm32f10x.o
+    0x08001bec   0x08001bec   0x00000122   Code   RO          189    .text.SetSysClockTo72  system_stm32f10x.o
+    0x08001d0e   0x08001d0e   0x00000002   PAD
+    0x08001d10   0x08001d10   0x00000026   Code   RO          202    .text.Single_Channel_ADC  Lib_IO_ITExt_ADC_TIM_2024a.lib(adc_dma.o)
+    0x08001d36   0x08001d36   0x00000002   PAD
+    0x08001d38   0x08001d38   0x000001a0   Code   RO           60    .text.StringFct_Float2Str  stringfct_2024.o
+    0x08001ed8   0x08001ed8   0x00000010   Code   RO           37    .text.SysTick_Handler  timemanagement.o
+    0x08001ee8   0x08001ee8   0x00000066   Code   RO          183    .text.SystemInit    system_stm32f10x.o
+    0x08001f4e   0x08001f4e   0x00000002   PAD
+    0x08001f50   0x08001f50   0x0000000c   Code   RO           35    .text.SystickGet    timemanagement.o
+    0x08001f5c   0x08001f5c   0x0000027a   Code   RO          250    .text.TIM1_CC_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x080021d6   0x080021d6   0x00000002   PAD
+    0x080021d8   0x080021d8   0x00000020   Code   RO          252    .text.TIM1_UP_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x080021f8   0x080021f8   0x00000284   Code   RO          254    .text.TIM2_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x0800247c   0x0800247c   0x000002ba   Code   RO          256    .text.TIM3_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x08002736   0x08002736   0x00000002   PAD
+    0x08002738   0x08002738   0x000002ba   Code   RO          258    .text.TIM4_IRQHandler  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x080029f2   0x080029f2   0x00000002   PAD
+    0x080029f4   0x080029f4   0x0000002c   Code   RO           43    .text.Time_Delay_x_ms  timemanagement.o
+    0x08002a20   0x08002a20   0x00000060   Code   RO           29    .text.Time_Init     timemanagement.o
+    0x08002a80   0x08002a80   0x00000184   Code   RO          236    .text.Timer_1234_Init  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x08002c04   0x08002c04   0x0000003c   Code   RO          119    .text.ToolBoxADC_Read  toolbox_nrj_uc_interface.o
+    0x08002c40   0x08002c40   0x000000f4   Code   RO          125    .text.Triangle      toolbox_nrj_uc_interface.o
+    0x08002d34   0x08002d34   0x00000028   Code   RO          218    .text.Wait_On_EOC_ADC  Lib_IO_ITExt_ADC_TIM_2024a.lib(adc_dma.o)
+    0x08002d5c   0x08002d5c   0x00000030   Code   RO           33    .text.__NVIC_EnableIRQ  timemanagement.o
+    0x08002d8c   0x08002d8c   0x00000042   Code   RO           31    .text.__NVIC_SetPriority  timemanagement.o
+    0x08002dce   0x08002dce   0x00000002   PAD
+    0x08002dd0   0x08002dd0   0x00000016   Code   RO           73    .text.delay         lcd_balance.o
+    0x08002de6   0x08002de6   0x00000002   PAD
+    0x08002de8   0x08002de8   0x00000012   Code   RO           89    .text.lcd_Clear     lcd_balance.o
+    0x08002dfa   0x08002dfa   0x00000002   PAD
+    0x08002dfc   0x08002dfc   0x000000ca   Code   RO           83    .text.lcd_Init      lcd_balance.o
+    0x08002ec6   0x08002ec6   0x00000002   PAD
+    0x08002ec8   0x08002ec8   0x00000046   Code   RO           87    .text.lcd_Print     lcd_balance.o
+    0x08002f0e   0x08002f0e   0x00000002   PAD
+    0x08002f10   0x08002f10   0x00000032   Code   RO           85    .text.lcd_Set_cursor  lcd_balance.o
+    0x08002f42   0x08002f42   0x00000002   PAD
+    0x08002f44   0x08002f44   0x00000014   Code   RO           79    .text.lcd_putchar   lcd_balance.o
+    0x08002f58   0x08002f58   0x000000c0   Code   RO           99    .text.lcd_read_status  lcd_balance.o
+    0x08003018   0x08003018   0x00000066   Code   RO           71    .text.lcd_write_4bit  lcd_balance.o
+    0x0800307e   0x0800307e   0x00000002   PAD
+    0x08003080   0x08003080   0x00000032   Code   RO           75    .text.lcd_write_cmd  lcd_balance.o
+    0x080030b2   0x080030b2   0x00000002   PAD
+    0x080030b4   0x080030b4   0x00000032   Code   RO           81    .text.lcd_write_data  lcd_balance.o
+    0x080030e6   0x080030e6   0x00000002   PAD
+    0x080030e8   0x080030e8   0x0000011a   Code   RO            2    .text.main          principal.o
+    0x08003202   0x08003202   0x00000002   PAD
+    0x08003204   0x08003204   0x00000024   Code   RO           77    .text.wait_while_busy  lcd_balance.o
+    0x08003228   0x08003228   0x0000000e   Code   RO          375    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08003236   0x08003236   0x00000002   Code   RO          376    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08003238   0x08003238   0x0000000e   Code   RO          377    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08003246   0x08003246   0x00000002   PAD
+    0x08003248   0x08003248   0x00000040   Data   RO          101    .rodata.SWAP_DATA   lcd_balance.o
+    0x08003288   0x08003288   0x00000040   Data   RO          102    .rodata.UserFont    lcd_balance.o
+    0x080032c8   0x080032c8   0x0000001e   Data   RO           13    .rodata.str1.1      principal.o
+    0x080032e6   0x080032e6   0x00000002   PAD
+    0x080032e8   0x080032e8   0x00000020   Data   RO          374    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003308, Size: 0x00000508, Max: 0x00005000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08003308   0x00000004   Data   RW          140    .data.Delta_Triangle  toolbox_nrj_uc_interface.o
+    0x20000004   0x0800330c   0x00000004   Data   RW          143    .data.VirtualReso   toolbox_nrj_uc_interface.o
+    0x20000008        -       0x00000004   Zero   RW           45    .bss.Cpt_1ms        timemanagement.o
+    0x2000000c        -       0x00000008   Zero   RW          298    .bss.Date_T1        Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000014        -       0x00000008   Zero   RW          300    .bss.Date_T2        Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x2000001c        -       0x00000008   Zero   RW          302    .bss.Date_T3        Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000024        -       0x00000008   Zero   RW          304    .bss.Date_T4        Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x2000002c        -       0x00000004   Zero   RW          142    .bss.Delta_PWM      toolbox_nrj_uc_interface.o
+    0x20000030        -       0x00000008   Zero   RW          299    .bss.Duree_Pulse_T1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000038        -       0x00000008   Zero   RW          301    .bss.Duree_Pulse_T2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000040        -       0x00000008   Zero   RW          303    .bss.Duree_Pulse_T3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000048        -       0x00000008   Zero   RW          305    .bss.Duree_Pulse_T4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000050        -       0x00000001   Zero   RW          267    .bss.Enable_Fct_IT_Compare_Match_TIM1_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000051        -       0x00000001   Zero   RW          269    .bss.Enable_Fct_IT_Compare_Match_TIM1_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000052        -       0x00000001   Zero   RW          271    .bss.Enable_Fct_IT_Compare_Match_TIM1_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000053        -       0x00000001   Zero   RW          273    .bss.Enable_Fct_IT_Compare_Match_TIM1_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000054        -       0x00000001   Zero   RW          275    .bss.Enable_Fct_IT_Compare_Match_TIM2_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000055        -       0x00000001   Zero   RW          277    .bss.Enable_Fct_IT_Compare_Match_TIM2_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000056        -       0x00000001   Zero   RW          279    .bss.Enable_Fct_IT_Compare_Match_TIM2_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000057        -       0x00000001   Zero   RW          281    .bss.Enable_Fct_IT_Compare_Match_TIM2_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000058        -       0x00000001   Zero   RW          283    .bss.Enable_Fct_IT_Compare_Match_TIM3_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000059        -       0x00000001   Zero   RW          285    .bss.Enable_Fct_IT_Compare_Match_TIM3_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x2000005a        -       0x00000001   Zero   RW          287    .bss.Enable_Fct_IT_Compare_Match_TIM3_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x2000005b        -       0x00000001   Zero   RW          289    .bss.Enable_Fct_IT_Compare_Match_TIM3_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x2000005c        -       0x00000001   Zero   RW          291    .bss.Enable_Fct_IT_Compare_Match_TIM4_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x2000005d        -       0x00000001   Zero   RW          293    .bss.Enable_Fct_IT_Compare_Match_TIM4_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x2000005e        -       0x00000001   Zero   RW          295    .bss.Enable_Fct_IT_Compare_Match_TIM4_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x2000005f        -       0x00000001   Zero   RW          297    .bss.Enable_Fct_IT_Compare_Match_TIM4_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000060        -       0x00000032   Zero   RW           14    .bss.MessageLCD     principal.o
+    0x20000092   0x08003310   0x00000002   PAD
+    0x20000094        -       0x00000004   Zero   RW          262    .bss.Ptr_TIM1       Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x20000098        -       0x00000004   Zero   RW          266    .bss.Ptr_TIM1_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x2000009c        -       0x00000004   Zero   RW          268    .bss.Ptr_TIM1_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000a0        -       0x00000004   Zero   RW          270    .bss.Ptr_TIM1_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000a4        -       0x00000004   Zero   RW          272    .bss.Ptr_TIM1_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000a8        -       0x00000004   Zero   RW          263    .bss.Ptr_TIM2       Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000ac        -       0x00000004   Zero   RW          274    .bss.Ptr_TIM2_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000b0        -       0x00000004   Zero   RW          276    .bss.Ptr_TIM2_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000b4        -       0x00000004   Zero   RW          278    .bss.Ptr_TIM2_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000b8        -       0x00000004   Zero   RW          280    .bss.Ptr_TIM2_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000bc        -       0x00000004   Zero   RW          264    .bss.Ptr_TIM3       Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000c0        -       0x00000004   Zero   RW          282    .bss.Ptr_TIM3_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000c4        -       0x00000004   Zero   RW          284    .bss.Ptr_TIM3_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000c8        -       0x00000004   Zero   RW          286    .bss.Ptr_TIM3_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000cc        -       0x00000004   Zero   RW          288    .bss.Ptr_TIM3_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000d0        -       0x00000004   Zero   RW          265    .bss.Ptr_TIM4       Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000d4        -       0x00000004   Zero   RW          290    .bss.Ptr_TIM4_Voie1  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000d8        -       0x00000004   Zero   RW          292    .bss.Ptr_TIM4_Voie2  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000dc        -       0x00000004   Zero   RW          294    .bss.Ptr_TIM4_Voie3  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000e0        -       0x00000004   Zero   RW          296    .bss.Ptr_TIM4_Voie4  Lib_IO_ITExt_ADC_TIM_2024a.lib(timer_1234.o)
+    0x200000e4        -       0x00000002   Zero   RW          141    .bss.Resolution     toolbox_nrj_uc_interface.o
+    0x200000e6   0x08003310   0x00000002   PAD
+    0x200000e8        -       0x00000004   Zero   RW           16    .bss.courant        principal.o
+    0x200000ec        -       0x00000004   Zero   RW           17    .bss.erreur         principal.o
+    0x200000f0        -       0x00000004   Zero   RW           19    .bss.erreur_prev    principal.o
+    0x200000f4        -       0x00000004   Zero   RW           12    .bss.f              principal.o
+    0x200000f8        -       0x00000004   Zero   RW           15    .bss.pot            principal.o
+    0x200000fc        -       0x00000004   Zero   RW           20    .bss.sortie         principal.o
+    0x20000100        -       0x00000004   Zero   RW           18    .bss.sortie_prev    principal.o
+    0x20000104   0x08003310   0x00000004   PAD
+    0x20000108        -       0x00000400   Zero   RW          173    STACK               startup_stm32f10x_md.o
 
 
 ==============================================================================
@@ -1139,23 +1185,24 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
       1502          0          0          0          0       4317   clock_f103.o
-       580          0        128          0          0       3399   lcd_balance.o
-       720          0         30          0         24       2661   principal.o
+       812          0        128          0          0       3590   lcd_balance.o
+       952          0         30          0         78       2839   principal.o
         28          4        236          0       1024        856   startup_stm32f10x_md.o
+       416          4          0          0          0       2250   stringfct_2024.o
        400          0          0          0          0       2985   system_stm32f10x.o
        282          0          0          0          4       4383   timemanagement.o
-       910          0          0          8          6       4418   toolbox_nrj_uc_interface.o
+       940          0          0          8          6       4418   toolbox_nrj_uc_interface.o
 
     ----------------------------------------------------------------------
-      4450          4        428          8       1064      23019   Object Totals
+      5368          8        428          8       1120      25638   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        28          0          2          0          6          0   (incl. Padding)
+        36          0          2          0          8          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
 
-       694          0          0          0          0        308   adc_dma.o
+       734          0          0          0          0        308   adc_dma.o
        530          0          0          0          0         40   gpio.o
       3850          0          0          0        160        324   timer_1234.o
          0          0          0          0          0          0   entry.o
@@ -1180,10 +1227,12 @@ Image component sizes
        222          0          0          0          0        100   ddiv.o
        186          0          0          0          0        176   depilogue.o
         62          0          0          0          0         80   dfixi.o
+        34          0          0          0          0         76   dflti.o
         26          0          0          0          0         76   dfltui.o
        228          0          0          0          0         96   dmul.o
         38          0          0          0          0         68   f2d.o
        176          0          0          0          0        140   fadd.o
+        28          0          0          0          0         68   fcmpge.o
        124          0          0          0          0         88   fdiv.o
        110          0          0          0          0        168   fepilogue.o
         50          0          0          0          0         68   ffixi.o
@@ -1191,19 +1240,19 @@ Image component sizes
        100          0          0          0          0         76   fmul.o
 
     ----------------------------------------------------------------------
-      7166         18          0          0        160       2624   Library Totals
+      7268         18          0          0        160       2768   Library Totals
         12          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-      5074          0          0          0        160        672   Lib_IO_ITExt_ADC_TIM_2024a.lib
+      5114          0          0          0        160        672   Lib_IO_ITExt_ADC_TIM_2024a.lib
        196         18          0          0          0        272   mc_w.l
-      1884          0          0          0          0       1680   mf_w.l
+      1946          0          0          0          0       1824   mf_w.l
 
     ----------------------------------------------------------------------
-      7166         18          0          0        160       2624   Library Totals
+      7268         18          0          0        160       2768   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -1212,15 +1261,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     11616         22        428          8       1224      24699   Grand Totals
-     11616         22        428          8       1224      24699   ELF Image Totals
-     11616         22        428          8          0          0   ROM Totals
+     12636         26        428          8       1280      27338   Grand Totals
+     12636         26        428          8       1280      27338   ELF Image Totals
+     12636         26        428          8          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                12044 (  11.76kB)
-    Total RW  Size (RW Data + ZI Data)              1232 (   1.20kB)
-    Total ROM Size (Code + RO Data + RW Data)      12052 (  11.77kB)
+    Total RO  Size (Code + RO Data)                13064 (  12.76kB)
+    Total RW  Size (RW Data + ZI Data)              1288 (   1.26kB)
+    Total ROM Size (Code + RO Data + RW Data)      13072 (  12.77kB)
 
 ==============================================================================
 

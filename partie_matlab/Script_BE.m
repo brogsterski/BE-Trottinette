@@ -29,6 +29,7 @@ FTBO_Shunt = K_Shunt*2*U_bat*Gain_Shunt* tf([tau_i_shunt 1], [tau_i_shunt^2 tau_
 % %Test des FT sans filtre
 % figure;
 % subplot(2,1,1);
+
 % margin(FTBO_Hall);
 % title('FTBO Hall');
 % 

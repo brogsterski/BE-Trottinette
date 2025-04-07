@@ -17,7 +17,7 @@ Library Manager: ArmAr.exe V6.22
 Hex Converter:   FromElf.exe V6.22
 CPU DLL:         SARMCM3.DLL V5.40.0.3
 Dialog DLL:      DARMSTM.DLL V1.69.1.0
-Target DLL:      UL2CM3.DLL V1.164.11.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
 Dialog DLL:      TARMSTM.DLL V1.67.1.0
  
 <h2>Project:</h2>
@@ -26,39 +26,28 @@ Project File Date:  03/11/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.22', folder: 'C:\Program Files\Keil_5.4\ARM\ARMCLANG\Bin'
-Rebuild target 'Simulation'
+Rebuild target 'Cible_STlink_F103'
 assembling startup_stm32f10x_md.s...
 compiling StringFct_2024.c...
-compiling Clock_F103.c...
-Service/LCD_Balance.c(123): warning: unused parameter 'cnt' [-Wunused-parameter]
-  123 | static void delay (int cnt)
-      |                        ^
-Service/LCD_Balance.c(177): warning: variable 'status' is uninitialized when used here [-Wuninitialized]
-  177 |   return (status);
-      |           ^~~~~~
-Service/LCD_Balance.c(169): note: initialize the variable 'status' to silence this warning
-  169 |   unsigned char status;
-      |                       ^
-      |                        = '\0'
-2 warnings generated.
-compiling LCD_Balance.c...
 compiling TimeManagement.c...
+compiling LCD_Balance.c...
+compiling Clock_F103.c...
 compiling ToolBox_NRJ_uC_Interface.c...
-src/Principal.c(108): warning: unused variable 'K_2' [-Wunused-variable]
-  108 |         float K_2 =K;
+src/Principal.c(110): warning: unused variable 'K_2' [-Wunused-variable]
+  110 |         float K_2 =K;
       |               ^~~
-src/Principal.c(110): warning: unused variable 'te' [-Wunused-variable]
-  110 |         float te =Te;
+src/Principal.c(112): warning: unused variable 'te' [-Wunused-variable]
+  112 |         float te =Te;
       |               ^~
-src/Principal.c(111): warning: unused variable 'coeff' [-Wunused-variable]
-  111 |         float coeff = -K+(Te/tau);
+src/Principal.c(113): warning: unused variable 'coeff' [-Wunused-variable]
+  113 |         float coeff = -K+(Te/tau);
       |               ^~~~~
 3 warnings generated.
 compiling Principal.c...
 compiling system_stm32f10x.c...
 linking...
-Program Size: Code=11616 RO-data=428 RW-data=8 ZI-data=1224  
-".\Objects\Pjet_uC_CASR.axf" - 0 Error(s), 5 Warning(s).
+Program Size: Code=12636 RO-data=428 RW-data=8 ZI-data=1280  
+".\Objects\Pjet_uC_CASR.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -76,7 +65,7 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/Device/STM32F103RB
-  ./RTE/_Simulation
+  ./RTE/_Cible_STlink_F103
   C:/ProgramData/keil/ARM/Pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include
   C:/ProgramData/keil/ARM/Pack/Keil/STM32F1xx_DFP/2.4.1/Device/Include
 
@@ -87,9 +76,9 @@ Package Vendor: Keil
    * Component: Keil::Device:Startup@1.0.0
       Source file:   Device/Source/ARM/startup_stm32f10x_md.s
       Include file:  RTE_Driver/Config/RTE_Device.h
-      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
       Source file:   Device/Source/system_stm32f10x.c
-Build Time Elapsed:  00:00:02
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
